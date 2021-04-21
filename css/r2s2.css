@@ -1,0 +1,798 @@
+/** CrimsonLogic UX Practice R2-S2 Foundation **/
+/** Project Specific CSS **/
+
+
+/** Start of Google Fonts Declarations for:
+    Open Sans: 300, 300italic, regular, italic, 600, 600italic, 700, 700italic, 800, 800italic
+    Open Sans Condensed: 300, 300italic, 700 **/
+/* open-sans-300 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/google/open-sans-v15-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Light'), local('OpenSans-Light'),
+       url('../fonts/google/open-sans-v15-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-v15-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-v15-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-300italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: url('../fonts/google/open-sans-v15-latin-300italic.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Light Italic'), local('OpenSans-LightItalic'),
+       url('../fonts/google/open-sans-v15-latin-300italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-v15-latin-300italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-300italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-300italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-v15-latin-300italic.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/google/open-sans-v15-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+       url('../fonts/google/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-v15-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/google/open-sans-v15-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Italic'), local('OpenSans-Italic'),
+       url('../fonts/google/open-sans-v15-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-v15-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-v15-latin-italic.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-600 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/google/open-sans-v15-latin-600.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+       url('../fonts/google/open-sans-v15-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-v15-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-v15-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-600italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: url('../fonts/google/open-sans-v15-latin-600italic.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans SemiBold Italic'), local('OpenSans-SemiBoldItalic'),
+       url('../fonts/google/open-sans-v15-latin-600italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-v15-latin-600italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-600italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-600italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-v15-latin-600italic.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/google/open-sans-v15-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Bold'), local('OpenSans-Bold'),
+       url('../fonts/google/open-sans-v15-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-v15-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-v15-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-700italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/google/open-sans-v15-latin-700italic.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'),
+       url('../fonts/google/open-sans-v15-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-v15-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-700italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-v15-latin-700italic.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-800 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/google/open-sans-v15-latin-800.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
+       url('../fonts/google/open-sans-v15-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-v15-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-v15-latin-800.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-800italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 800;
+  src: url('../fonts/google/open-sans-v15-latin-800italic.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans ExtraBold Italic'), local('OpenSans-ExtraBoldItalic'),
+       url('../fonts/google/open-sans-v15-latin-800italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-v15-latin-800italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-800italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-v15-latin-800italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-v15-latin-800italic.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-condensed-300 - latin */
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/google/open-sans-condensed-v12-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'),
+       url('../fonts/google/open-sans-condensed-v12-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-condensed-v12-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-condensed-v12-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-condensed-v12-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-condensed-v12-latin-300.svg#OpenSansCondensed') format('svg'); /* Legacy iOS */
+}
+/* open-sans-condensed-300italic - latin */
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: url('../fonts/google/open-sans-condensed-v12-latin-300italic.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Condensed Light Italic'), local('OpenSansCondensed-LightItalic'),
+       url('../fonts/google/open-sans-condensed-v12-latin-300italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-condensed-v12-latin-300italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-condensed-v12-latin-300italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-condensed-v12-latin-300italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-condensed-v12-latin-300italic.svg#OpenSansCondensed') format('svg'); /* Legacy iOS */
+}
+/* open-sans-condensed-700 - latin */
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/google/open-sans-condensed-v12-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Condensed Bold'), local('OpenSansCondensed-Bold'),
+       url('../fonts/google/open-sans-condensed-v12-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/google/open-sans-condensed-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/google/open-sans-condensed-v12-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/google/open-sans-condensed-v12-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/google/open-sans-condensed-v12-latin-700.svg#OpenSansCondensed') format('svg'); /* Legacy iOS */
+}
+/** End of Google Fonts Declarations **/
+
+
+/** Main Containers Styling **/
+
+html {
+  font-size: 16px;
+}
+
+body {  
+  position: relative;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  background: #fff;
+  background-attachment: fixed;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+a {
+    color: #333;
+
+}
+a:hover {
+    color: #007faf;
+    text-decoration: underline;
+}
+
+.wrapper {
+  min-width: 320px;
+  min-height: 512px;
+  outline: none;
+}
+
+.container-fluid {
+  position: static;
+  min-width: 320px;
+  max-width: 1440px!important; /* This controls the maximum display width of the elements. If you need full width, use the max-content-width keyword below or just set it to 100% */
+  padding: 0;
+  margin: auto;
+}
+
+.max-content-width { /* For the body content */
+  max-width: 100%!important;
+}
+
+/** This is to prevent Bootstrap modal from shifting the page when it is loaded **/
+.modal-open[style] {
+  overflow: auto;
+  padding-right: 0px!important;
+}
+
+/** End of Main Containers Styling **/
+
+
+/** Button Styling **/
+/** If there are no Buttons, please delete the whole block below */
+
+.btn {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}  
+
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
+}
+
+/** Delete till here if there are no Buttons **/
+
+
+/** Navigation Styling **/
+/** If there is no Navigation, please delete the whole block below */
+
+.navbar-container,
+.navbar-brand,
+.navbar-collapse
+{
+  position: static;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.wrapper.sticky .navbar-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1020;
+}
+
+.navbar-brand:hover {
+  opacity: 0.5!important;
+}
+
+.navbar-nav .dropdown-menu {
+  display: block;
+  max-height: 0;  
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.navbar-nav .dropdown-menu.show {
+  max-height: 100vh;
+  -webkit-transition: all 0.7s ease-in;
+  -moz-transition: all 0.7s ease-in;
+  -ms-transition: all 0.7s ease-in;
+  -o-transition: all 0.7s ease-in;
+  transition: all 0.7s ease-in;
+}
+
+.navbar-toggler {
+  position: absolute;
+  top: 14px;
+  right: 3px;
+  border: 0;
+}
+
+@media only screen and (max-width: 767.98px) {
+
+  /* 250px is the minimum width for the mobile menu slideout */
+
+  body.nav-open {
+    right:  max(calc(100vw - 100px), 250px);
+    overflow: hidden;
+  }
+
+  .wrapper.sticky .navbar-container.nav-open {
+    left: min(calc(100px - 100vw), -250px);
+  }    
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    width: max(calc(100vw - 100px), 250px);
+    height: 100%;
+    right: min(calc(100px - 100vw), -250px);
+    margin: 0!important;
+    background-color: #333;
+    padding: 15px;
+    z-index: -10;
+  }
+
+  .navbar-collapse.nav-open {
+    right: 0;
+  }  
+
+  .dropdown-menu {
+    text-align: center;
+  }
+
+}
+
+/** Delete till here if there is no Navigation **/
+
+
+/** Carousel Styling **/
+/** If there is no Carousel, please delete the whole block below */
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 8%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+/** Delete till here if there is no Carousel **/
+
+
+/** Main Content Styling **/
+
+.main-content {
+  position: relative;
+  margin: 0 auto;
+}
+
+.wrapper.sticky .main-content {
+  margin: 56px auto 0;
+}
+
+/** End of Main Content Styling **/
+  
+  
+/** Accordions Styling **/
+/** If there are no Accordions, please delete the whole block below */
+
+.card-header > button {
+  width: 100%;
+  padding: 5px 22px 0 0;
+  font-size: 1rem;
+  
+}
+
+.card-header > button:hover, 
+.card-header > button:active, 
+.card-header > button:focus  {
+  text-decoration:none;
+  box-shadow: none;
+}
+
+.card-header > button::before {
+  position: absolute;
+  display: inline-block;
+  right: 14px;
+  top: 14px;
+  content: "\f068";    
+  font-family: "Font Awesome 5 Pro";
+  color: #888;
+  font-weight: 400;
+  font-size: 16px;
+  border: 1px solid #888;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  padding-left: 5px;
+  padding-top: 3px;
+  line-height: initial;
+}
+
+.card-header > button:hover:before {
+  border: 1px solid #007faf;
+  color: #007faf;
+}
+
+.card-header > button.collapsed:before {
+  border-radius: 0;
+  content: "\f067";
+}
+
+.card-header > button::before {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.card-header > button:hover::before {
+  opacity: 0.5;
+}
+
+.card-body {
+  background-color: #fff;
+}
+
+/** Delete till here if there are no Accordions **/
+
+
+/** Datables Styling **/
+/** If there are no DataTables, please delete the whole block below */
+
+/** Refer to datatables.css */
+
+/** Delete till here if there are no DataTables **/
+
+
+/** Searchable FAQs Styling **/
+/** If there are no Searchable FAQs, please delete the whole block below */
+
+.faq {
+}
+
+.faq input {
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  display: block;
+  padding: 0 20px;
+  margin-bottom: 40px;
+  border: #d0d0d0 2px solid;
+  color: #007faf;
+}
+
+.faq input::-webkit-input-placeholder { color: #d0d0d0 !important; }
+.faq input::-moz-placeholder  { color: #d0d0d0 !important; }
+.faq input:-ms-input-placeholder  { color: #d0d0d0 !important; }
+.faq input:-moz-placeholder { color: #d0d0d0 !important; }
+
+.faq input:focus {
+  outline-width: 0;
+  border: #007faf 2px solid;
+}
+
+.faq .highlight {
+  color: #fff;
+  background-color: #007faf;
+}
+
+.faq > ul {
+  list-style-type: none;
+  margin: -40px 0 0;
+  padding: 0;
+}
+
+.faq > ul > li {
+  position: relative;
+  display: block;
+  text-align: left;
+  margin: 20px 1rem 0;
+  padding-top: 20px;
+/*  padding-right: 30px; */
+}
+
+.faq > ul > li:not( :first-child ) {
+  border-top: 1px solid #dcebed;
+}
+
+.faq > ul > li.is-hidden {
+  display: none;
+}
+
+.faq > ul > li h2 a {
+  display: inline-block;
+  word-wrap: normal;
+  padding-right: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;  
+}
+
+.faq > ul > li h2 a:hover {
+  color: #007faf;
+  text-decoration: none;
+}
+
+.faq > ul > li h2 a::before {
+  display: inline-block;
+  margin-left: -2rem;
+  width: 2rem;
+  font-family: Font Awesome\ 5 Pro;
+  font-weight: 900;
+  font-size: 1.5rem;
+  content: " \f0da";
+  color: #007faf;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.faq > ul > li h2 a:hover::before {
+  margin-left: -1rem;
+  width: 1rem;
+  opacity: 1;
+}
+
+.faq > ul > li.is-active h2 a {
+  color: #007faf;
+}
+
+.faq > ul > li h2 a:after {
+  content: "\f067";
+  font-family: "Font Awesome 5 Pro";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  color: #888;
+  font-weight: 400;
+  font-size: 16px;
+  border: 1px solid #888;
+  border-radius: 0;
+  padding: 0 4px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;  
+}
+
+.faq > ul > li h2 a:hover:after {
+  border: 1px solid #007faf;
+  color: #007faf;
+}
+
+.faq > ul > li.is-active h2 a:after {
+  border-radius: 50%;
+  content: "\f068";
+}
+
+.faq > ul > li > div {
+  display: block;
+  margin-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;    
+}
+
+/*
+Note that max-height need to be upadated if there is a possibility that the content is > 1024px tall, especially in mobile mode.
+Otherwise, you can also set overflow above to auto but the scroll bar may flicker for a bit during transition.
+*/
+.faq > ul > li.is-active > div,
+.faq > ul > li:target > div {
+  opacity: 1;
+  max-height: 1024px;
+}
+
+.faq .hidden-keywords
+{
+  display: none;
+}
+
+.faq__notfound {
+  font-size: 20px;
+  font-style: italic;
+  display: none;
+}
+  
+.faq__notfound.is-visible {
+  display: block;
+}
+
+/** Delete till here if there are no Searchable FAQs **/
+
+
+/** In-Page Sitemap Styling **/
+/** If there is no In-Page Sitemap, please delete the whole block below */
+
+.sitemap {
+  display: block;
+  text-align: left;
+  background: #8f8f8f;
+  color: #fff;
+}
+
+.sitemap .row {
+  margin: 0;
+}
+
+.sitemap a {
+  overflow: hidden;
+}
+
+.sitemap h1 {
+  display: inline;
+  margin: 5px 0;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.sitemap h2 {
+  display: inline;
+  margin: 5px 0;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.sitemap h3 {
+  display: inline;
+  margin: 5px 0;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.sitemap a::after {
+  font-family: Font Awesome\ 5 Pro;
+  font-weight: 900;
+  font-size: 0.75em;
+  content: "\f0da";
+  color: #afafaf;
+  padding-left: 5px;
+}
+
+.sitemap a:hover {
+  color: #fff;
+}
+
+.sitemap a:hover::after {
+  display: inline-block;
+  color: #fff;
+}
+
+.sitemap-title {
+  padding: 10px 15px 0;
+}
+
+.sitemap-content {
+  padding: 10px 0;
+}
+
+
+@media only screen and (max-width: 575.98px) {
+  .sitemap {
+    text-align: center;
+  }
+}
+
+/** Delete till here if there is no In-Page Sitemap **/
+
+
+/** Footer Styling **/
+/** If there is no Footer, please delete the whole block below **/
+
+.footer {
+  display: block;
+  padding: 1rem;
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: #fff;
+  background-color: #c41c23;
+  text-align: left;
+  margin-bottom: -22px;
+}
+
+.footer-link,
+.footer-link:hover,
+.footer-link:active,
+.footer-link:visited {
+  color: inherit;
+}
+
+@media only screen and (max-width: 767.98px) {
+
+  .footer {
+    text-align: center;
+  }
+
+}
+
+/** Delete till here if there is no Footer **/
+
+
+/** Social Media Links Styling **/
+/** If there are no Social Media Links, please delete the whole block below **/
+
+.social-link-block {
+  float: right;
+  margin-top: -3px;
+}
+
+.social-link {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #000;
+  font-size: 14px;
+  padding-top: 3px;
+  padding-left: 3px;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.social-link:hover {
+  color: #000!important;
+  background-color: #fff!important;
+}
+
+.social-link.facebook {
+  background-color: #3b5998;
+}
+
+.social-link.linkedin {
+  background-color: #0077b5;
+}
+
+.social-link.twitter {
+  background-color: #1da1f2;
+}
+
+.social-link.instagram {
+  background-color: #262626;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .social-link-block {
+    float: none;
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/** Delete till here if there are no Social Media Links **/

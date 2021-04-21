@@ -1,0 +1,2424 @@
+<!doctype html>
+<!-- CrimsonLogic UX Practice R2-S2 Foundation -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Judiciary Design System</title>
+<!-- Start of CSS Includes --> 
+<!-- Delete what you do not need to use, including comments like this line -->
+<link href="css/all.min.css" rel="stylesheet" type="text/css">
+<!-- Font Awesome Minified CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!-- Bootstrap Minified CSS -->
+<link href="css/cluxp.css" rel="stylesheet" type="text/css">
+<!--<link href="css/r2s2.css" rel="stylesheet" type="text/css">--> 
+<!-- CL UX Practice R2-S2 Foundation CSS -->
+<link href="css/datatables.css" rel="stylesheet" type="text/css">
+<!-- DataTables CSS -->
+<link href="css/animate.min.css" rel="stylesheet" type="text/css">
+<!-- Animate Minified CSS -->
+<link href="css/aos.min.css" rel="stylesheet" type="text/css">
+<!-- AOS: Animate on Scroll Minified CSS --> 
+<!-- JDS specific CSS -->
+<link href="css/jds.css" rel="stylesheet" type="text/css">
+<!-- End of CSS includes --> 
+<!-- Start of Deferred JS Includes --> 
+<!-- Delete what you do not need to use, including comments like this line --> 
+<script defer src="js/jquery.min.js"></script> <!-- jQuery Minified JS --> 
+<script defer src="js/bootstrap.bundle.min.js"></script> <!-- Bootstrap Bundle Minified JS --> 
+<script defer src="js/cluxp.js"></script> <!-- CL UX Practice R2-S2 Foundation JS --> 
+<script defer src="js/datatables.min.js"></script> <!-- DataTables Minified JS --> 
+<script defer src="js/aos.min.js"></script> <!-- AOS: Animate on Scroll Minified JS --> 
+<script defer src="js/faqs.js"></script> <!-- CL UX Practice R2-S2 Searchable FAQs JS --> 
+<script defer src="js/jds.js"></script> <!-- Project specific JS --> 
+<!-- End of JS Includes -->
+</head>
+<body>
+<!-- Start of R2-S2's Loader Encased Body Wrapper --> 
+<!-- If you are not using the loader, delete the next line -->
+<div id="loader">
+  <div id="loading-dialog" class="modaH show" tabindex="-1" aria-modal="true" style="display: block;">
+    <div class="loader-main">
+      <div class="loader">Loading...</div>
+      <span>Just a moment. We are loading the content...</span><strong><img src="images/sg-courts-logo.svg" alt="" width="240"></strong></div>
+  </div>
+</div>
+<div class="wrapper sticky" id="page"> 
+  <!-- If you do not need the Navbar to be sticky, remove the "sticky" keyword from the "wrapper" div above --> 
+  <!-- If you are using the autohide Navbar, the "sticky" keyword must be present in the "wrapper" div above --> 
+  <!-- Start of R2-S2's Scroll to Top Widget --> 
+  <a href="javascript:" id="scroll-to-top" title="Scroll to Top"><span class="fas fa-chevron-up"></span></a> 
+  <!-- End of Scroll to Top Widget --> 
+  <!-- Start of Default Confirmation Modal -->
+  <div class="modal fade" id="default" tabindex="-1" aria-labelledby="default" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content has-icon alert alert-default">
+        <div class="modal-header">
+          <h3 class="modal-title"><i class="fas fa-info-circle"></i>Confirm Action</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <i aria-hidden="true" class="fal fa-times"></i> </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to take this <strong>Specific Action</strong> ?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary btn-action">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Default Confirmation Modal --> 
+  <!-- Start of Success Confirmation Modal -->
+  <div class="modal fade" id="success" tabindex="-1" aria-labelledby="success" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content has-icon alert alert-success">
+        <div class="modal-header">
+          <h3 class="modal-title"><i class="fas fa-check-circle"></i>Confirm Action</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <i aria-hidden="true" class="fal fa-times"></i> </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to take this <strong>Specific Action</strong> ?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-success btn-action">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Success Confirmation Modal --> 
+  <!-- Start of Warning Confirmation Modal -->
+  <div class="modal fade" id="warning" tabindex="-1" aria-labelledby="warning" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content has-icon alert alert-warning">
+        <div class="modal-header">
+          <h3 class="modal-title"><i class="fas fa-exclamation-circle"></i>Confirm Action</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <i aria-hidden="true" class="fal fa-times"></i> </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to take this <strong>Specific Action</strong> ?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-warning btn-action">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Warning Confirmation Modal --> 
+  <!-- Start of Error Confirmation Modal -->
+  <div class="modal fade" id="error" tabindex="-1" aria-labelledby="error" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content has-icon alert alert-error">
+        <div class="modal-header">
+          <h3 class="modal-title"><i class="fas fa-times-circle"></i>Confirm Action</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <i aria-hidden="true" class="fal fa-times"></i> </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to take this <strong>Specific Action</strong> ?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-error btn-action">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Error Confirmation Modal --> 
+  <!-- Start of Example Confirmation Modal -->
+  <div class="modal fade" id="example" tabindex="-1" aria-labelledby="example" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content has-icon alert alert-example">
+        <div class="modal-header">
+          <h3 class="modal-title"><i class="fal fa-lightbulb-on"></i>Confirm Action</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <i aria-hidden="true" class="fal fa-times"></i> </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to take this <strong>Specific Action</strong> ?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-example btn-action">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Example Confirmation Modal --> 
+  <!-- Keep the components you need and delete the rest --> 
+  <!-- Anything with inline styling from here on are meant to be deleted -->
+  
+  <div class="jds-sggov-masthead">
+    <div class="container-fluid"> <a href="https://www.gov.sg" target="_blank"> <span class="sgds-icon sgds-icon-sg-crest"></span> <span class="is-text">A Singapore Government Agency Website</span> </a> </div>
+  </div>
+  <!-- Start of Bootstrap Collapsible Navbar --> 
+  <!-- If you do not need the Navbar to be sticky, remove the "sticky" keyword from the "wrapper" div above --> 
+  <!-- If you do not need a sticky autohide Navbar, remove the "-auto"keyword from the "navbar-container" div below -->
+  <header class="navbar-container">
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid"> 
+        <!-- Menu Logo --> 
+        <a class="navbar-brand" href="#"><img src="images/sg-courts-logo.svg" alt="Logo"></a>
+        <div class="navbar-toggler" onclick="menuMove(this)">
+          <div class="menu-icon">
+            <div class="menu-bar1"></div>
+            <div class="menu-bar2"></div>
+            <div class="menu-bar3"></div>
+          </div>
+        </div>
+        <div class="navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item mx-md-2"><a class="nav-link"  href="#" title="Go to Item 2">About</a></li>
+            <li class="nav-item dropdown position-static"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates <span class="caret"></span></a> 
+              
+              <!--Add .menu-inline class if inline menu is required-->
+              <div class="dropdown-menu menu-inline" aria-labelledby="navbarDropdown">
+                <div class="container-fluid"> <a class="dropdown-item" href="page-empty.html" title="">Header + Body (Empty) + Footer</a> <a class="dropdown-item" href="page-with-content.html" title="">Header + Body with Content + Footer</a> <a class="dropdown-item" href="page-with-form.html" title="">Header + Body with Form + Footer</a><a class="dropdown-item" href="my-info.html" title="">My Info</a><a class="dropdown-item" href="faq.html" title="">FAQ</a> </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown Menu <span class="caret"></span></a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#" title="Go to Item 1A">Dropdown Menu 1</a> <a class="dropdown-item" href="#" title="Go to Item 1B">Dropdown Menu 2</a> </div>
+            </li>
+            <li class="nav-item dropdown position-static"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components <span class="caret"></span></a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="container-fluid megamenu">
+                  <div class="row">
+                    <div class="col-lg-4"> <a class="dropdown-item" href="#accordion-wrapper">Accordion</a> <a class="dropdown-item" href="#badge-wrapper">Badge</a> <a class="dropdown-item" href="#breadcrumb-wrapper">Breadcrumb</a> <a class="dropdown-item" href="#buttons-wrapper">Button</a> <a class="dropdown-item" href="#cards-wrapper">Card</a> <a class="dropdown-item" href="#callouts-wrapper">Callout</a> <a class="dropdown-item" href="#carousel-wrapper">Carousel</a> <a class="dropdown-item" href="#checkbox-wrapper">Checkbox</a> <a class="dropdown-item" href="#dropdown-wrapper">Dropdown</a> </div>
+                    <div class="col-lg-4"> <a class="dropdown-item" href="#hero-wrapper">Hero</a> <a class="dropdown-item" href="#icons-wrapper">Icons</a><a class="dropdown-item" href="#loader-wrapper">Loader</a> <a class="dropdown-item" href="#modals-wrapper">Modal</a> <a class="dropdown-item" href="#notfication-wrapper">Notification</a> <a class="dropdown-item" href="#pagination-wrapper">Pagination</a> <a class="dropdown-item" href="#popover-wrapper">Popover</a> <a class="dropdown-item" href="#radiobutton-wrapper">Radio Button</a> <a class="dropdown-item" href="#scrolltotop-wrapper">Scroll to top</a> </div>
+                    <div class="col-lg-4"> <a class="dropdown-item" href="#tab-wrapper">Tab</a> <a class="dropdown-item" href="#static-table-wrapper">Table</a> <a class="dropdown-item" href="#tag-wrapper">Tag</a> <a class="dropdown-item" href="#textarea-wrapper">Text Area</a> <a class="dropdown-item" href="#textinput-wrapper">Text Input</a> <a class="dropdown-item" href="#tooltip-wrapper">Tooltip</a> <a class="dropdown-item" href="#typography-wrapper">Typography</a> <a class="dropdown-item" href="#wizard-wrapper">Wizard</a> </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-md-auto">
+            <li class="nav-item ml-2 ml-md-0 my-2 my-md-0">
+              <button class="btn btn-primary btn-lg" type="button" aria-label="Login" title="Login Now" onclick="javascript:location.href=''"><span class="fal fa-unlock-alt"></span> Login</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End of Bootstrap Collapsible Navbar --> 
+  <!-- Start of Main Content -->
+  <main class="main-content"> 
+    <!-- Start of Bootstrap Carousel Sample -->
+    
+    <div id="section-carousel" class="carousel slide" data-ride="carousel" data-interval="5000"> 
+      <!-- Carousel Indicators -->
+      <ol class="carousel-indicators">
+        <li title="Show Slide 1" data-target="#section-carousel" data-slide-to="0" class="active"></li>
+        <li title="Show Slide 2" data-target="#section-carousel" data-slide-to="1"></li>
+        <li title="Show Slide 3" data-target="#section-carousel" data-slide-to="2"></li>
+        <!--   <li title="Show Slide 4" data-target="#section-carousel" data-slide-to="3"></li>-->
+      </ol>
+      <div class="carousel-inner"> 
+        <!-- Slide #1 -->
+        <div class="carousel-item active">
+          <div style="display: table-cell; height: 550px; width: 100vw; vertical-align: middle; background-color: #e2dfdb;">
+            <h1>Judiciary Design System</h1>
+            <p>SCJDS unites style, content and components with a single set of design principles. Whether you’re a developer or designer, you’ll get all the information and guidance you need.</p>
+          </div>
+        </div>
+        <!-- Slide #2 -->
+        <div class="carousel-item">
+          <div style="display: table-cell; height: 550px; width: 100vw; vertical-align: middle; background-color: #e2dfdb;">
+            <h1>Title of the slide</h1>
+            <p>Short description</p>
+          </div>
+        </div>
+        <!-- Slide #3 -->
+        <div class="carousel-item">
+          <div style="display: table-cell; height: 550px; width: 100vw; vertical-align: middle; background-color: #e2dfdb;">
+            <h1>Title of the slide</h1>
+            <p>Short description</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-link carousel-control-prev" data-target="#section-carousel" data-slide="prev" title="Show Previous Slide"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </button>
+      <button class="btn btn-link carousel-control-next" data-target="#section-carousel" data-slide="next" title="Show Next Slide"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </button>
+    </div>
+    <!-- End of Bootstrap Carousel Sample --> 
+    
+    <!-- Start of Bootstrap Accordions Sample (Independent) -->
+    <section class="component-section" id="accordion-wrapper" >
+      <h2 class="text-center">Accordions</h2>
+      <div class="container-fluid">
+        <div class="accordion">
+          <div class="card" >
+            <div class="card-header">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#accordion-content1" aria-expanded="false" aria-controls="accordion-content1" href="#accordion-content1" title="Toggle Accordion" >Accordion bar 1</button>
+            </div>
+            <div id="accordion-content1" class="collapse" >
+              <div class="card-body">
+                <h4>This is an example of a open section</h4>
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+            </div>
+          </div>
+          <div class="card " >
+            <div class="card-header">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#accordion-content2" aria-expanded="false" aria-controls="accordion-content2" href="#accordion-content2" title="Toggle Accordion" >Accordion bar 2</button>
+            </div>
+            <div id="accordion-content2" class="collapse" >
+              <div class="card-body">
+                <h4>This is an example of a open section</h4>
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#accordion-content3" aria-expanded="false" aria-controls="accordion-content3" href="#accordion-content3" title="Toggle Accordion" s>Accordion bar 3</button>
+            </div>
+            <div id="accordion-content3" class="collapse" >
+              <div class="card-body">
+                <h4>This is an example of a open section</h4>
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Bootstrap Accordion Sample (Independent) --> 
+    <!-- Start of Badge Sample (Independent) -->
+    <section class="component-section" id="badge-wrapper">
+      <h2 class="text-center">Badge</h2>
+      <div class="container-fluid text-left">
+        <h4>Default</h4>
+        <div class="pb-4">
+          <button type="button" class="btn btn-primary"> Profile <span class="badge badge-light">9</span> <span class="sr-only">unread messages</span> </button>
+        </div>
+        <div class="pb-4"> <a href="javascript:void(0);" class="notification" title="Notification"> <i class="fal fa-bell"></i> <sup>1</sup> </a> <span class="mx-3"></span> <a href="javascript:void(0);" class="notification has-notification" title="Notification"> <i class="fal fa-bell"></i></a> </div>
+      </div>
+      <div class="container-fluid ">
+        <h4 class="text-left">Status Indicator</h4>
+        <div class="pb-4 text-left"> <a href="javascript:void(0);" class="user-status available" title="Available"> <i class="fas fa-user"></i></a> <span class="mx-3"></span> <a href="javascript:void(0);" class="user-status away" title="Away"> <i class="fas fa-user"></i></a> <span class="mx-3"></span> <a href="javascript:void(0);" class="user-status busy" title="Busy"> <i class="fas fa-user"></i></a> <span class="mx-3"></span> <a href="javascript:void(0);" class="user-status offline" title="Offline"> <i class="fas fa-user"></i></a> <span class="mx-3"></span>
+          <div class="dropdown user-dropdown d-inline-block"> <a href="javascript:void(0);" class="user-status user-default dropdown-toggle" title="User" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-user"></i></a>
+            <div class="dropdown-menu"> <a class="dropdown-item" href="#" title="">Page  1</a> <a class="dropdown-item" href="#" title="">Page  2</a> <a class="dropdown-item" href="faq.html" title="">Page  3</a> </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Badge Sample (Independent) --> 
+    <!-- Start of Breadcrumbs Sample (Independent) -->
+    <section class="component-section" id="breadcrumb-wrapper" >
+      <h2 class="text-center">Breadcrumb</h2>
+      <div class="container-fluid ">
+        <h4 class="text-left">Default</h4>
+        <nav aria-label="Full path to the current page">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Application Center</a></li>
+            <li class="breadcrumb-item"><a href="#">Application List</a></li>
+            <li class="breadcrumb-item active" aria-current="page">An Application</li>
+          </ol>
+        </nav>
+        <h4 class="text-left mt-4">With an icon</h4>
+        <nav aria-label="Full path to the current page">
+          <ol class="breadcrumb has-icon">
+            <li class="breadcrumb-item"><a href="#"><i class="fal fa-home"></i><span class="sr-only">Home</span></a></li>
+            <li class="breadcrumb-item"><a href="#"><i class="fal fa-list-alt"></i>Application Center</a></li>
+            <li class="breadcrumb-item"><a href="#"><i class="fal fa-list-alt"></i>Application List</a></li>
+            <li class="breadcrumb-item active" aria-current="page">An Application</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    <!-- End of Breadcrumbs Sample (Independent) --> 
+    <!-- Start of Buttons Sample (Independent) -->
+    <section class="component-section" id="buttons-wrapper" >
+      <h2 class="text-center">Buttons</h2>
+      <div class="container-fluid">
+        <div class="text-left">
+          <h3 class="mb-3">Types</h3>
+          <button type="button" class="btn btn-primary">Default</button>
+          <button type="button" class="btn btn-outline">Outlined</button>
+          <button type="button" class="btn btn-link">Link</button>
+          <h3 class="mb-3 mt-5">Variants</h3>
+          <button type="button" class="btn btn-primary"><i class="fal fa-list-alt mr-2"></i>Icon left</button>
+          <button type="button" class="btn btn-primary">Icon right<i class="fal fa-list-alt ml-2"></i></button>
+          <button type="button" class="btn btn-link"><i class="fal fa-list-alt mr-2"></i>Text</button>
+          <button type="button" class="btn icon-only"><i class="fal fa-list-alt"></i></button>
+          <h3 class="mb-3 mt-5">States</h3>
+          <button type="button" class="btn btn-primary">Default</button>
+          <button type="button" class="btn btn-secondary">Hover</button>
+          <button type="button" disabled class="btn btn-primary">Disabled</button>
+          <h3 class="mb-3 mt-5">Colours</h3>
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-secondary">Secondary</button>
+          <button type="button" class="btn btn-tertiary">Tertiary</button>
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-error">Error</button>
+          <button type="button" class="btn btn-example">Example</button>
+          <h3 class="mb-3 mt-5">Colours Outline</h3>
+          <button type="button" class="btn btn-outline-primary">Primary</button>
+          <button type="button" class="btn btn-outline-secondary">Secondary</button>
+          <button type="button" class="btn btn-outline-tertiary">Tertiary</button>
+          <button type="button" class="btn btn-outline-success">Success</button>
+          <button type="button" class="btn btn-outline-warning">Warning</button>
+          <button type="button" class="btn btn-outline-error">Error</button>
+          <button type="button" class="btn btn-outline-example">Example</button>
+          <h3 class="mb-3 mt-5">Button Sizes</h3>
+          <button type="button" class="btn btn-primary btn-small">Small</button>
+          <button type="button" class="btn btn-primary">Default</button>
+          <button type="button" class="btn btn-primary btn-large">Large</button>
+        </div>
+      </div>
+    </section>
+    <div class="btn-center py-4">
+      <div class="container-fluid">
+        <h3>Button Group</h3>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+      </div>
+    </div>
+    <!-- End of Buttons Sample (Independent) --> 
+    <!-- Start of Cards Sample (Independent) -->
+    <section class="component-section" id="cards-wrapper">
+      <h2 class="text-center">Cards</h2>
+      <div class="container-fluid ">
+        <h3 class="text-left">Cards with icon</h3>
+        <div class="row">
+          <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+            <div class="card has-icon">
+              <div class="card-header text-left"><span class="jds-tag has-success ">Tag/Badge</span></div>
+              <div class="card-body">
+                <div class="card-icon"><span><i class="fal fa-briefcase"></i></span></div>
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-12">
+            <div class="card has-list has-options text-left h-auto  mb-2">
+              <div class="card-header"> <span class="jds-tag has-primary-light">Step 1</span>
+                <h5 class="card-title">Card with list items</h5>
+              </div>
+              <div class="card-body">
+                <div class="card-item d-flex">
+                  <h5>Tan Ah Kow</h5>
+                  <button type="button" class="btn btn-primary btn-small mr-auto">Add Signature</button>
+                  <span  data-toggle="modal" data-target="#add_signature">
+                  <button type="button" class="btn icon-only  mr-1" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fal fa-edit"></i></button>
+                  </span>
+                  <button type="button" class="btn icon-only" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fal fa-trash-alt"></i></button>
+                </div>
+                <div class="card-item d-flex">
+                  <h5>Natash Wen hao Tien</h5>
+                  <button type="button" class="btn btn-primary btn-small mr-auto">Add Signature</button>
+                  <span  data-toggle="modal" data-target="#add_signature">
+                  <button type="button" class="btn icon-only mr-1" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fal fa-edit"></i></button>
+                  </span>
+                  <button type="button" class="btn icon-only" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fal fa-trash-alt"></i></button>
+                </div>
+              </div>
+              <div class="card-footer justify-content-center">
+                <button type="button" class="btn btn-primary mr-1">Action</button>
+                <button type="button" class="btn btn-outline-primary">Action</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+            <div class="card has-icon has-link" onClick="location.href='#'">
+              <div class="card-header text-left"><span class="jds-tag has-warning ">Tag/Badge</span></div>
+              <div class="card-body">
+                <div class="card-icon"><span><i class="fal fa-briefcase"></i></span></div>
+                <h4 class="card-title">Clickable Card (Stretched Link)</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+            <div class="card has-options text-left">
+              <div class="card-header">
+                <h6>Date</h6>
+                <h5 class="card-title">Card with Menu</h5>
+                <div class="dropdown cards-dropdown"><a href="#" class="dots dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="far fa-ellipsis-v"></i><span class="sr-only">Dropdown</span></a>
+                  <div class="dropdown-menu" style=""> <a class="dropdown-item" href="#">Item 1</a> <a class="dropdown-item" href="#">Item 2</a> <a class="dropdown-item" href="#">Item 3</a> </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer"> <span class="jds-tag has-warning mr-auto">Tag/Badge</span>
+                <button type="button" class="btn btn-link mr-3" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download"><i class="fal fa-arrow-to-bottom"></i></button>
+                <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="" data-original-title="Calendar"><i class="fal fa-calendar-alt"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-left mt-5 mb-3">Cards with image</h3>
+        <div class="row">
+          <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+            <div class="card has-image">
+              <div class="card-header"><img class="card-img-top  img-fluid" src="images/img1.jpg" alt="Card image"></div>
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+            <div class="card has-image">
+              <div class="card-header"><img class="card-img-top  img-fluid" src="images/img2.jpg" alt="Card image"></div>
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+            <div class="card has-image">
+              <div class="card-header"><img class="card-img-top img-fluid" src="images/img3.jpg" alt="Card image"></div>
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+            <div class="card has-image">
+              <div class="card-header"><img class="card-img-top img-fluid" src="images/img4.jpg" alt="Card image"></div>
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-left mt-5 mb-3">Horizontal Card</h3>
+        <div class="card">
+          <div class="card-horizontal">
+            <div class="img-circle-wrapper"> <i class="fal fa-briefcase"></i> </div>
+            <div class="card-body"> <span class="jds-tag has-warning">Pending</span>
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <button type="button" class="btn btn-primary">Action</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Cards Sample (Independent) --> 
+    <!-- Start of Callout Sample (Independent) -->
+    <section class="component-section" id="callouts-wrapper" >
+      <h2 class="text-center">Callouts</h2>
+      <div class="container text-left"> 
+        
+        <!--Call out Default-->
+        
+        <div class="alert alert-default has-icon alert-large" role="alert" > <span><i class="fas fa-info-circle"></i></span>
+          <div class="alert-content">
+            <h4>Title / Heading of the alert</h4>
+            <p>Description will be shown here. This can be a combination of dismissible and link.</p>
+          </div>
+        </div>
+        <!-- Call out Info-->
+        <div class="alert alert-info has-icon alert-large" role="alert" > <span><i class="fas fa-info-circle"></i></span>
+          <div class="alert-content">
+            <h4>Info or Notes</h4>
+            <p>Description will be shown here. This can be a combination of dismissible and link.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Callout Sample (Independent) --> 
+    <!-- Start of Carousel Sample (Independent) -->
+    <section class="component-section" id="carousel-wrapper" >
+      <h2 class="text-center">Carousel</h2>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6">
+            <h3 class="text-left">Carousel with cards</h3>
+          </div>
+          <div class="col-6 text-right"> <a class="btn btn-outline-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev"> <span class="fas fa-chevron-left"></span> </a> <a class="btn btn-outline-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next"> <span class="fas fa-chevron-right"></span> </a> </div>
+          <div class="col-12">
+            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                      <div class="card has-icon">
+                        <div class="card-header text-left"><span class="jds-tag has-success ">Tag/Badge</span></div>
+                        <div class="card-body">
+                          <div class="card-icon"><span><i class="fal fa-briefcase"></i></span></div>
+                          <h4 class="card-title">Card title</h4>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer">
+                          <button type="button" class="btn btn-primary">Action</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                      <div class="card has-icon">
+                        <div class="card-header text-left"><span class="jds-tag has-example-light ">Tag/Badge</span></div>
+                        <div class="card-body">
+                          <div class="card-icon"><span><i class="fal fa-briefcase"></i></span></div>
+                          <h4 class="card-title">Card title</h4>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer">
+                          <button type="button" class="btn btn-primary mr-1">Action</button>
+                          <button type="button" class="btn btn-outline-primary">Action</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                      <div class="card has-icon has-link" onClick="location.href='#'">
+                        <div class="card-header text-left"><span class="jds-tag has-warning ">Tag/Badge</span></div>
+                        <div class="card-body">
+                          <div class="card-icon"><span><i class="fal fa-briefcase"></i></span></div>
+                          <h4 class="card-title">Clickable Card (Stretched Link)</h4>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                      <div class="card has-icon has-link" onClick="location.href='#'">
+                        <div class="card-header text-left"><span class="jds-tag has-warning ">Tag/Badge</span></div>
+                        <div class="card-body">
+                          <div class="card-icon"><span><i class="fal fa-briefcase"></i></span></div>
+                          <h4 class="card-title">Clickable Card (Stretched Link)</h4>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                      <div class="card has-image"> <img class="card-img-top" src="images/img1.jpg" alt="Card image">
+                        <div class="card-body">
+                          <h4 class="card-title">Card title</h4>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer">
+                          <button type="button" class="btn btn-primary">Action</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                      <div class="card has-image"> <img class="card-img-top" src="images/img2.jpg" alt="Card image">
+                        <div class="card-body">
+                          <h4 class="card-title">Card title</h4>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer">
+                          <button type="button" class="btn btn-primary">Action</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                      <div class="card has-image"> <img class="card-img-top img-fluid" src="images/img3.jpg" alt="Card image">
+                        <div class="card-body">
+                          <h4 class="card-title">Card title</h4>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer">
+                          <button type="button" class="btn btn-primary">Action</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                      <div class="card has-image"> <img class="card-img-top img-fluid" src="images/img3.jpg" alt="Card image">
+                        <div class="card-body">
+                          <h4 class="card-title">Card title</h4>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer">
+                          <button type="button" class="btn btn-primary">Action</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                      <div class="card has-options">
+                        <div class="card-header">
+                          <h6>Date</h6>
+                          <h5 class="card-title">Card with Menu</h5>
+                          <div class="dropdown cards-dropdown"><a href="#" class="dots dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="far fa-ellipsis-v"></i><span class="sr-only">Dropdown</span></a>
+                            <div class="dropdown-menu" style=""> <a class="dropdown-item" href="#">Item 1</a> <a class="dropdown-item" href="#">Item 2</a> <a class="dropdown-item" href="#">Item 3</a> </div>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer"> <span class="jds-tag has-warning mr-auto">Tag/Badge</span>
+                          <button type="button" class="btn btn-link mr-3"><i class="fal fa-arrow-to-bottom"></i></button>
+                          <button type="button" class="btn btn-link"><i class="fal fa-calendar-alt"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                      <div class="card has-options">
+                        <div class="card-header">
+                          <h6>Date</h6>
+                          <h5 class="card-title">Card with Menu</h5>
+                          <div class="dropdown cards-dropdown"><a href="#" class="dots dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="far fa-ellipsis-v"></i><span class="sr-only">Dropdown</span></a>
+                            <div class="dropdown-menu" style=""> <a class="dropdown-item" href="#">Item 1</a> <a class="dropdown-item" href="#">Item 2</a> <a class="dropdown-item" href="#">Item 3</a> </div>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer"> <span class="jds-tag has-warning mr-auto">Tag/Badge</span>
+                          <button type="button" class="btn btn-link mr-3"><i class="fal fa-arrow-to-bottom"></i></button>
+                          <button type="button" class="btn btn-link"><i class="fal fa-calendar-alt"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                      <div class="card has-options">
+                        <div class="card-header">
+                          <h6>Date</h6>
+                          <h5 class="card-title">Card with Menu</h5>
+                          <div class="dropdown cards-dropdown"><a href="#" class="dots dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="far fa-ellipsis-v"></i><span class="sr-only">Dropdown</span></a>
+                            <div class="dropdown-menu" style=""> <a class="dropdown-item" href="#">Item 1</a> <a class="dropdown-item" href="#">Item 2</a> <a class="dropdown-item" href="#">Item 3</a> </div>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer"> <span class="jds-tag has-warning mr-auto">Tag/Badge</span>
+                          <button type="button" class="btn btn-link mr-3"><i class="fal fa-arrow-to-bottom"></i></button>
+                          <button type="button" class="btn btn-link"><i class="fal fa-calendar-alt"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                      <div class="card has-options">
+                        <div class="card-header">
+                          <h6>Date</h6>
+                          <h5 class="card-title">Card with Menu</h5>
+                          <div class="dropdown cards-dropdown"><a href="#" class="dots dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="far fa-ellipsis-v"></i><span class="sr-only">Dropdown</span></a>
+                            <div class="dropdown-menu" style=""> <a class="dropdown-item" href="#">Item 1</a> <a class="dropdown-item" href="#">Item 2</a> <a class="dropdown-item" href="#">Item 3</a> </div>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer"> <span class="jds-tag has-warning mr-auto">Tag/Badge</span>
+                          <button type="button" class="btn btn-link mr-3"><i class="fal fa-arrow-to-bottom"></i></button>
+                          <button type="button" class="btn btn-link"><i class="fal fa-calendar-alt"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Carousel Sample (Independent) --> 
+    
+    <!-- Start of Checkbox Sample (Independent) -->
+    <section class="component-section" id="checkbox-wrapper" >
+      <div class="container-fluid max-content-width">
+        <h2 class="text-center">Checkbox</h2>
+        <div class="container text-left bordered">
+          <h5>Checkbox Group (Stacked)</h5>
+          <div class="form-check">
+            <label class="form-check-label" for="CheckboxDefault1">
+              <input class="form-check-input" type="checkbox" name="CheckboxDefault" id="CheckboxDefault1">
+              Checkbox 1 (Default) <span class="checkbox-overlay "></span> </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="CheckboxDefault2">
+              <input class="form-check-input" type="checkbox" name="CheckboxDefault" id="CheckboxDefault2" >
+              Checkbox 2 (Default) <span class="checkbox-overlay "></span> </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="CheckboxDefault3">
+              <input class="form-check-input" type="checkbox" name="CheckboxDefault" id="CheckboxDefault3" checked>
+              Checkbox 3 (Selected) <span class="checkbox-overlay "></span> </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="CheckboxDefault4">
+              <input class="form-check-input" type="checkbox" name="CheckboxDefault" id="CheckboxDefault4" disabled>
+              Checkbox 4(Disabled Default) <span class="checkbox-overlay "></span> </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="CheckboxDefault5">
+              <input class="form-check-input" type="checkbox" name="CheckboxDefault" id="CheckboxDefault5" >
+              Checkbox 5 <span class="checkbox-overlay "></span> </label>
+          </div>
+        </div>
+        <div class="container text-left bordered">
+          <h5>Checkbox Group (Inline)</h5>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="CheckboxDefault21">
+              <input class="form-check-input" type="checkbox" name="CheckboxDefault" id="CheckboxDefault21">
+              Checkbox 1 (Default) <span class="checkbox-overlay "></span> </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="CheckboxDefault22">
+              <input class="form-check-input" type="checkbox" name="CheckboxDefault" id="CheckboxDefault22" >
+              Checkbox 2 (Default) <span class="checkbox-overlay "></span> </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="CheckboxDefault23">
+              <input class="form-check-input" type="checkbox" name="CheckboxDefault" id="CheckboxDefault23" checked>
+              Checkbox 3 (Selected) <span class="checkbox-overlay "></span> </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="CheckboxDefault24">
+              <input class="form-check-input" type="checkbox" name="CheckboxDefault" id="CheckboxDefault24" disabled>
+              Checkbox 4(Disabled Default) <span class="checkbox-overlay "></span> </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="CheckboxDefault25">
+              <input class="form-check-input" type="checkbox" name="CheckboxDefault" id="CheckboxDefault25" >
+              Checkbox 5 <span class="checkbox-overlay "></span> </label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Checkbox Sample (Independent) --> 
+    
+    <!-- Start of Dropdown/side-nav Sample (Independent) -->
+    <section class="component-section" id="dropdown-wrapper" >
+      <div class="container-fluid max-content-width">
+        <h2 class="text-center">Dropdown / side-nav</h2>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 col-lg-3">
+              <div class="side-nav">
+                <ul>
+                  <li><a href="#"><span>Main menu(no icon)</span></a></li>
+                  <li class="dropdown-cust"><a href="javascript:void(0)" class="dropdown-toggle-cust"><span>Main menu + sub nav (no icon)</span></a>
+                    <div class="dropdown-menu-cust"> <a class="dropdown-item active" href="#">Sub menu one</a> <a class="dropdown-item" href="#">Sub menu two</a> <a class="dropdown-item" href="#">Sub menu three</a> </div>
+                  </li>
+                  <li><a href="#"><i class="fal fa-briefcase"></i><span>Main menu(has icon)</span></a></li>
+                  <li class="dropdown-cust"><a href="javascript:void(0)" class="dropdown-toggle-cust"><i class="fal fa-briefcase"></i><span>Main menu + sub nav (has icon)</span></a>
+                    <div class="dropdown-menu-cust"> <a class="dropdown-item active" href="#">Sub menu one</a> <a class="dropdown-item" href="#">Sub menu two</a> <a class="dropdown-item" href="#">Sub menu three</a> </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Dropdown/side-nav Sample (Independent) --> 
+    
+    <!-- Start of Hero Sample (Independent) -->
+    <section class="component-section px-0" id="hero-wrapper" >
+      <h2 class="text-center">Hero</h2>
+      <div class="container-fluid">
+        <h3 class="text-left mb-4">Hero image  with tagline</h3>
+      </div>
+      <div class="hero-banner">
+        <div class="hero-banner-content">
+          <h1 class="mb-4">Judiciary Design System</h1>
+          <h3 class="mb-4">Judiciary DS unites style, content and components with a single set of design  principles. Whether you’re a developer or designer, you’ll get all the information  and guidance you need.</h3>
+          <div class="text-center">
+            <button class="btn btn-primary btn-large">Call to Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <h3 class="text-left mt-5 mb-4">Hero image with Search Bar</h3>
+      </div>
+      <div class="hero-banner has-search">
+        <div class="hero-banner-content">
+          <h1 class="mb-4">Judiciary Design System</h1>
+          <h3 class="mb-4">Judiciary DS unites style, content and components with a single set of design  principles. Whether you’re a developer or designer, you’ll get all the information  and guidance you need.</h3>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="">
+            <div class="input-group-append">
+              <button class="btn btn-primary btn-large" type="button">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Hero Sample (Independent) --> 
+    
+    <!-- Start of Icon Collection -->
+    <section class="component-section px-0" id="icons-wrapper" >
+      <h2 class="text-center">Icons</h2>
+      <div class="container-fluid">
+        <h3 class="text-left mb-2">Sizes</h3>
+        <ul class="text-left ml-n4 mb-4">
+          <li class="d-inline-block text-center mr-3"><i class="fal fa-bell fa-1x"></i><br>
+            1x</li>
+          <li class="d-inline-block text-center mr-3"><i class="fal fa-bell fa-2x"></i><br>
+            2x</li>
+          <li class="d-inline-block text-center"><i class="fal fa-bell fa-3x"></i><br>
+            3x</li>
+        </ul>
+        <h3 class="text-left mb-4">Generic icons</h3>
+        <div class="icon-container text-left mb-4">
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-bell fa-2x"></i></a> <span>Notification</span><br>
+            <code>&lt;i class=&quot;fal fa-bell&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-archive fa-2x"></i></a> <span>Archive</span><br>
+            <code>&lt;i class=&quot;fal fa-archive&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-briefcase fa-2x"></i></a> <span>Briefcase</span><br>
+            <code>&lt;i class=&quot;fal fal fa-briefcase&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-bullhorn fa-2x"></i></a> <span>Announcement</span><br>
+            <code>&lt;i class=&quot;fal fa-bullhorn&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-list-alt fa-2x"></i></a> <span>List</span><br>
+            <code>&lt;i class=&quot;fal fa-list-alt&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-ballot-check fa-2x"></i></a> <span>Check List</span><br>
+            <code>&lt;i class=&quot;fal fa-ballot-check&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-cog fa-2x"></i></a> <span>Settings</span><br>
+            <code>&lt;i class=&quot;fal fa-cog&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-tools fa-2x"></i></a> <span>Tools</span><br>
+            <code>&lt;i class=&quot;fal fa-tools&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-balance-scale fa-2x"></i></a> <span>Balance Scale</span><br>
+            <code>&lt;i class=&quot;fal fa-balance-scale&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-address-book fa-2x"></i></a> <span>Address Book</span><br>
+            <code>&lt;i class=&quot;fal fa-address-book&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-video fa-2x"></i></a> <span>Video</span><br>
+            <code>&lt;i class=&quot;fal fa-video&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-sms fa-2x"></i></a> <span>SMS</span><br>
+            <code>&lt;i class=&quot;fal fa-sms&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-sliders-h fa-2x"></i></a> <span>Filters</span> <br>
+            <code>&lt;i class=&quot;fal fa-sliders-h&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-sack-dollar fa-2x"></i></a> <span>Money</span> <br>
+            <code>&lt;i class=&quot;fal fa-sack-dollar&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-inbox fa-2x"></i></a> <span>Inbox</span> <br>
+            <code>&lt;i class=&quot;fal fa-inbox&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-lightbulb-on fa-2x"></i></a> <span>Quick Tip / Light Bulb</span> <br>
+            <code>&lt;i class=&quot;fal fa-lightbulb-on&quot;&gt;&lt;/i&gt;</code></div>
+        </div>
+        <h3 class="text-left mb-4">Navigation icons</h3>
+        <div class="icon-container text-left mb-4">
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-home fa-2x"></i></a> <span>Home</span><br>
+            <code>&lt;i class=&quot;fal fa-home&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-bars fa-2x"></i></a> <span>Menu</span><br>
+            <code>&lt;i class=&quot;fal fa-bars&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-sign-in-alt fa-2x"></i></a> <span>Sign In</span><br>
+            <code>&lt;i class=&quot;fal fal fa-sign-in-alt&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-sign-out-alt fa-2x"></i></a> <span>Sign Out</span><br>
+            <code>&lt;i class=&quot;fal fal fa-sign-out-alt&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-user-circle fa-2x"></i></a> <span>Profile / User 1</span><br>
+            <code>&lt;i class=&quot;fal fa-user-circle&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-times-circle fa-2x"></i></a> <span>Close</span><br>
+            <code>&lt;i class=&quot;fal fa-times-circle&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-arrow-up fa-2x"></i></a> <span>Arrow-up</span><br>
+            <code>&lt;i class=&quot;fal fa-arrow-up&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-arrow-down fa-2x"></i></a> <span>Arrow-down</span><br>
+            <code>&lt;i class=&quot;fal fa-arrow-down&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-arrow-left fa-2x"></i></a> <span>Arrow-left</span><br>
+            <code>&lt;i class=&quot;fal fa-arrow-left&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-arrow-right fa-2x"></i></a> <span>Arrow-right</span><br>
+            <code>&lt;i class=&quot;fal fa-arrow-right&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-chevron-up fa-2x"></i></a> <span>Chevron-up</span><br>
+            <code>&lt;i class=&quot;fal fa-chevron-up&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-chevron-down fa-2x"></i></a> <span>Chevron-down</span><br>
+            <code>&lt;i class=&quot;fal fa-chevron-down&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-chevron-left fa-2x"></i></a> <span>Chevron-left</span><br>
+            <code>&lt;i class=&quot;fal fa-chevron-left&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-chevron-right fa-2x"></i></a> <span>Chevron-right</span> <br>
+            <code>&lt;i class=&quot;fal fa-chevron-right&quot;&gt;&lt;/i&gt;</code></div>
+        </div>
+        <h3 class="text-left mb-4">Action icons</h3>
+        <div class="icon-container text-left mb-4">
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-search fa-2x"></i></a> <span>Search</span><br>
+            <code>&lt;i class=&quot;fal fa-search&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-edit fa-2x"></i></a> <span>Edit</span><br>
+            <code>&lt;i class=&quot;fal fa-edit&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-print fa-2x"></i></a> <span>Print</span><br>
+            <code>&lt;i class=&quot;fal fal fa-print&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-save fa-2x"></i></a> <span>Save</span><br>
+            <code>&lt;i class=&quot;fal fa-save&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-trash-alt fa-2x"></i></a> <span>Delete</span><br>
+            <code>&lt;i class=&quot;fal fa-trash-alt&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-external-link fa-2x"></i></a> <span>External Link</span><br>
+            <code>&lt;i class=&quot;fal fa-external-link&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-calendar-alt fa-2x"></i></a> <span>Calendar</span><br>
+            <code>&lt;i class=&quot;fal fa-calendar-alt&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-clock fa-2x"></i></a> <span>Time</span><br>
+            <code>&lt;i class=&quot;fal fa-fa-clock&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-plus fa-2x"></i></a> <span>Add</span><br>
+            <code>&lt;i class=&quot;fal fa-plus&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-minus fa-2x"></i></a> <span>Remove</span><br>
+            <code>&lt;i class=&quot;fal fa-minus&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-minus-octagon fa-2x"></i></a> <span>Terminate</span><br>
+            <code>&lt;i class=&quot;fal fa-minus-octagon&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-paper-plane fa-2x"></i></a> <span>Send</span><br>
+            <code>&lt;i class=&quot;fal fa-paper-plane&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-share-square fa-2x"></i></a> <span>Share</span><br>
+            <code>&lt;i class=&quot;fal fa-share-square&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-sort fa-2x"></i></a> <span>Sort</span><br>
+            <code>&lt;i class=&quot;fal fa-sort&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-sort-up fa-2x"></i></a> <span>Sort up</span><br>
+            <code>&lt;i class=&quot;fal fa-sort-up&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-sort-down fa-2x"></i></a> <span>Sort down</span><br>
+            <code>&lt;i class=&quot;fal fa-sort-down&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-arrow-to-top fa-2x"></i></a> <span>Upload</span><br>
+            <code>&lt;i class=&quot;fal fa-arrow-to-top&quot;&gt;&lt;/i&gt;</code></div>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-arrow-to-bottom fa-2x"></i></a> <span>Download</span><br>
+            <code>&lt;i class=&quot;fal fa-arrow-to-bottom&quot;&gt;&lt;/i&gt;</code></div>
+          <br>
+          <div class="icon-card"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-original-title="Size: 2x"><i class="fal fa-file-upload fa-2x"></i></a> <span>Upload Document</span><br>
+            <code>&lt;i class=&quot;fal fa-file-upload&quot;&gt;&lt;/i&gt;</code></div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Hero Sample (Independent) --> 
+    
+    <!-- Start of Loader Sample (Independent) -->
+    <section class="component-section" id="loader-wrapper" >
+      <h2 class="text-center">Loaders</h2>
+      <div class="container-fluid text-left">
+        <button type="button" class="btn btn-primary" data-aos="fade-up" data-aos-duration="750" aria-label="Loader" title="Test the Loader for 5 seconds" onclick="javascript:testLoader()" >5 Seconds Loader Test</button>
+        <button class="btn btn-primary" data-aos="fade-up" data-aos-duration="1250" aria-label="Loading..."> <span class="spinner-border spinner-border-sm"></span> Loading.. </button>
+      </div>
+    </section>
+    <!-- End of Loader Sample (Independent) --> 
+    
+    <!-- Start of Modal Sample (Independent) -->
+    <section class="component-section" id="modals-wrapper" >
+      <h2 class="text-center">Modals</h2>
+      <div class="container-fluid text-left">
+        <h3 class="card-label">Sizes</h3>
+        <div class="example">
+          <p>Modals have three optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>. These sizes triggers on at certain breakpoints to avoid horizontal scrollbars on narrower viewports. </p>
+          <div class="example-preview"> 
+            <!-- Button trigger modal-->
+            <button type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#jdsModalSizeSm">Modal - Small</button>
+            <button type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#jdsModalSizeDefault">Modal - Default</button>
+            <button type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#jdsModalSizeLg">Modal - Large</button>
+            <button type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#jdsModalSizeXl">Modal - Extra Large</button>
+            <button type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#jdsModalSizeFullwidth">Modal - Full Width</button>
+            <!--begin::Modal-->
+            <div class="modal fade" id="jdsModalSizeSm" tabindex="-1" aria-labelledby="jdsModalSizeSm" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" >Modal Title</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <i aria-hidden="true" class="fal fa-times"></i> </button>
+                  </div>
+                  <div class="modal-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Action</button>
+                    <button type="button" class="btn btn-primary">Action</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end::Modal--> 
+            <!--begin::Modal-->
+            <div class="modal fade" id="jdsModalSizeDefault" tabindex="-1" aria-labelledby="jdsModalSizeDefault" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" >Modal Title</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <i aria-hidden="true" class="fal fa-times"></i> </button>
+                  </div>
+                  <div class="modal-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Action</button>
+                    <button type="button" class="btn btn-primary">Action</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end::Modal--> 
+            <!--begin::Modal-->
+            <div class="modal fade" id="jdsModalSizeLg" tabindex="-1" aria-labelledby="jdsModalSizeLg" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Modal Title</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <i aria-hidden="true" class="fal fa-times"></i> </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Action</button>
+                    <button type="button" class="btn btn-primary">Action</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end::Modal--> 
+            <!--begin::Modal-->
+            <div class="modal fade" id="jdsModalSizeXl" tabindex="-1" aria-labelledby="jdsModalSizeXl" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" >Modal Title</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <i aria-hidden="true" class="fal fa-times"></i> </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Action</button>
+                    <button type="button" class="btn btn-primary">Action</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end::Modal--> 
+            <!--begin::Modal-->
+            <div class="modal fade" id="jdsModalSizeFullwidth" tabindex="-1" aria-labelledby="jdsModalSizeFullwidth" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog modal-dialog-centered modal-fullwidth" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Modal Title</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <i aria-hidden="true" class="fal fa-times"></i> </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Action</button>
+                    <button type="button" class="btn btn-primary">Action</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end::Modal--> 
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Modal Sample (Independent) --> 
+    
+    <!-- Start of Notification Styling -->
+    <section class="component-section" id="notfication-wrapper" >
+      <h2 class="text-center">Notifications/Alerts</h2>
+      <div class="container text-left">
+        <div class="alert alert-default" role="alert"> This is a standard notification/alert. </div>
+        <!--Dismissable Alert-->
+        <div class="alert alert-default alert-dismissible fade show" role="alert"> This is a <strong>dismissable!</strong> notification/alert.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span class="has-icon" aria-hidden="true" ><i class="fal fa-times-circle"></i></span> </button>
+        </div>
+        <!--With a link -->
+        <div class="alert alert-default" role="alert"> This is a notification/alert <a href="#" class="alert-link">with a link</a>. </div>
+        <!--With an icon -->
+        <div class="alert alert-default has-icon alert-dismissible fade show" role="alert" > <span class="has-icon"><i class="fas fa-info-circle"></i></span> This is a notification/alert <a href="#" class="alert-link">with an icon</a>.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true" ><i class="fal fa-times-circle"></i></span> </button>
+        </div>
+        <div class="alert alert-default has-icon alert-large" role="alert" > <span class="has-icon"><i class="fas fa-info-circle"></i></span>
+          <div class="alert-content">
+            <h4>Title / Heading of the alert</h4>
+            <p>Description will be shown here. This can be a combination of dismissible and link.</p>
+          </div>
+        </div>
+        
+        <!--Success-->
+        <div class="alert alert-success has-icon alert-large" role="alert" > <span class="has-icon"><i class="fas fa-check-circle"></i></span>
+          <div class="alert-content">
+            <h4>Success</h4>
+            <p>Description will be shown here. This can be a combination of dismissible and link.</p>
+          </div>
+        </div>
+        <!--Warning-->
+        <div class="alert alert-warning has-icon alert-large" role="alert" > <span class="has-icon"><i class="fas fa-exclamation-triangle"></i></span>
+          <div class="alert-content">
+            <h4>Warning</h4>
+            <p>Description will be shown here. This can be a combination of dismissible and link.</p>
+          </div>
+        </div>
+        <!--Warning-->
+        <div class="alert alert-error has-icon alert-large" role="alert" > <span class="has-icon"><i class="fas fa-times-circle"></i></span>
+          <div class="alert-content">
+            <h4>Error Message</h4>
+            <p>Description will be shown here. This can be a combination of dismissible and link.</p>
+          </div>
+        </div>
+        <!--Example-->
+        <div class="alert alert-example has-icon alert-large" role="alert" > <span class="has-icon"><i class="fas fa-lightbulb-on"></i></span>
+          <div class="alert-content">
+            <h4>Example</h4>
+            <p>Description will be shown here. This can be a combination of dismissible and link.</p>
+          </div>
+        </div>
+        <h3 class="text-left mt-5 mb-2">Confirmation Dialogs</h3>
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#default">Default</button>
+        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#success">Success</button>
+        <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#warning">Warning</button>
+        <button type="button" class="btn btn-outline-error" data-toggle="modal" data-target="#error">Error</button>
+        <button type="button" class="btn btn-outline-example" data-toggle="modal" data-target="#example">Example</button>
+      </div>
+    </section>
+    <!-- Start of R2-S2's Notification Bar -->
+    <h3 class="text-center mt-3 mb-2">Full Width Notifications</h3>
+    <div id="notification" class="notification_fw bg-primary">
+      <div class="container-fluid">
+        <div class="notification_close" title="Dismiss Notification"><span class="fal fa-times"></span></div>
+        <i class="fal fa-info-circle"></i> <strong>Important Notice:</strong> This is a full width notification bar. You have a notification! </div>
+    </div>
+    <div class="notification_fw bg-success d-block">
+      <div class="container-fluid">
+        <div class="notification_close" title="Dismiss Notification"><span class="fal fa-times"></span></div>
+        <i class="fal fa-check-circle"></i> <strong>Success:</strong> This is a full width notification bar. You have a notification! </div>
+    </div>
+    <div class="notification_fw bg-warning d-block">
+      <div class="container-fluid">
+        <div class="notification_close" title="Dismiss Notification"><span class="fal fa-times"></span></div>
+        <i class="fal fa-exclamation-circle"></i> <strong>Warning:</strong> This is a full width notification bar. You have a notification! </div>
+    </div>
+    <div class="notification_fw bg-error d-block">
+      <div class="container-fluid">
+        <div class="notification_close" title="Dismiss Notification"><span class="fal fa-times"></span></div>
+        <i class="fal fa-times-circle"></i> <strong>Error:</strong> This is a full width notification bar. You have a notification! </div>
+    </div>
+    <!-- End of R2-S2's Notification Bar --> 
+    <!-- End of Notification Styling --> 
+    
+    <!-- Start of Pagination Sample (Independent) -->
+    <section class="component-section" id="pagination-wrapper" >
+      <h2 class="text-center">Pagination</h2>
+      <div class="container-fluid">
+        <nav aria-label="Pagination">
+          <div class="pagination-container">
+            <div class="item_per_page"> <span>Show
+              <select class="custom-select">
+                <option selected value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+              entries</span></div>
+            <div class="item_count">1-20 of 85 items</div>
+            <ul class="pagination">
+              <li class="page-item disabled"><a class="page-link" href="#"><i class="fal fa-chevron-left"></i><span class="sr-only">Previous</span></a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#"><i class="fal fa-chevron-right"></i><span class="sr-only">Next</span></a></li>
+            </ul>
+            <div class="input-group input-group ml-4"> <span class="mt-2">Go to</span>
+              <input type="text" class="form-control ml-1" placeholder="Page#" aria-label="Jump to a page" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-dark" type="button"><i class="fal fa-chevron-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <!-- End of Pagination Sample (Independent) --> 
+    
+    <!-- Start of Popover Sample (Independent) -->
+    <section class="component-section" id="popover-wrapper" >
+      <h2 class="text-center">Popovers</h2>
+      <div class="container-fluid">
+        <h3 class="text-left">Bottom</h3>
+        <p class="text-left"> Lorem Ipsum is simply dummy text of the printing an d typesetting industry. Lorem Ipsum  has been the industry's standard dummy <span class="has-popover"><span class="popover-link">bottom - left aligned</span><span class="pop-overlay"></span> <span class="popover-content align-left"> <span class="popover-close"><i class="fal fa-times"></i></span> <span class="pop-title">Title</span> Lorem Ipsum is simply dummy text of the printing an d typesetting industry. Lorem Ipsum  has been the industry's standard dummy </span> </span> text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into <span class="has-popover"><span class="popover-link">bottom - center aligned</span><span class="pop-overlay"></span><span class="popover-content align-center"> <span class="popover-close"><i class="fal fa-times"></i></span> <span class="pop-title">Title</span> Lorem Ipsum is simply dummy text of the printing an d typesetting industry. Lorem Ipsum  has been the industry's standard dummy </span></span> electronic typesetting, essentially unchanged. It was popularised in 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and recently with desktop <span class="has-popover"><span class="popover-link">bottom - right aligned</span><span class="pop-overlay"></span><span class="popover-content align-right"> <span class="popover-close"><i class="fal fa-times"></i></span> <span class="pop-title">Title</span> Lorem Ipsum is simply dummy text of the printing an d typesetting industry. Lorem Ipsum  has been the industry's standard dummy </span></span> software like Aldus PageMaker including versions of Lorem Ipsum </p>
+      </div>
+    </section>
+    <!-- End of Popover Sample (Independent) --> 
+    
+    <!-- Start of Radio button Sample (Independent) -->
+    <section class="component-section" id="radiobutton-wrapper" >
+      <div class="container-fluid max-content-width">
+        <h2 class="text-center">Radio Buttons</h2>
+        <div class="container text-left bordered">
+          <h5>Radio Group (Stacked)</h5>
+          <div class="form-check">
+            <label class="form-check-label" for="RadioDefault1">
+              <input class="form-check-input" type="radio" name="RadioDefault" id="RadioDefault1">
+              Radio 1 (Default) <span class="radio-overlay "></span> </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="RadioDefault2">
+              <input class="form-check-input" type="radio" name="RadioDefault" id="RadioDefault2" >
+              Radio 2 (Default) <span class="radio-overlay "></span> </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="RadioDefault3">
+              <input class="form-check-input" type="radio" name="RadioDefault" id="RadioDefault3" checked>
+              Radio 3 (Selected) <span class="radio-overlay "></span> </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="RadioDefault4">
+              <input class="form-check-input" type="radio" name="RadioDefault" id="RadioDefault4" disabled>
+              Radio 4(Disabled Default) <span class="radio-overlay "></span> </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="RadioDefault5">
+              <input class="form-check-input" type="radio" name="RadioDefault" id="RadioDefault5" >
+              Radio 5 <span class="radio-overlay "></span> </label>
+          </div>
+        </div>
+        <div class="container text-left bordered">
+          <h5>Radio Group (Inline)</h5>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="RadioDefault11">
+              <input class="form-check-input" type="radio" name="RadioDefault1" id="RadioDefault11">
+              Radio 1 (Default) <span class="radio-overlay "></span> </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="RadioDefault21">
+              <input class="form-check-input" type="radio" name="RadioDefault1" id="RadioDefault21" >
+              Radio 2 (Default) <span class="radio-overlay "></span> </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="RadioDefault31">
+              <input class="form-check-input" type="radio" name="RadioDefault1" id="RadioDefault31" checked>
+              Radio 3 (Selected) <span class="radio-overlay "></span> </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="RadioDefault41">
+              <input class="form-check-input" type="radio" name="RadioDefault1" id="RadioDefault41" disabled>
+              Radio 4(Disabled Default) <span class="radio-overlay "></span> </label>
+          </div>
+          <div class="form-check form-check-inline invalid">
+            <label class="form-check-label" for="RadioDefault51">
+            <input class="form-check-input" type="radio" name="RadioDefault1" id="RadioDefault51">
+            Radio 5 <span class="radio-overlay "> </span>
+            <div class="invalid-feedback">Invalid text</div>
+            </label>
+          </div>
+        </div>
+        <div class="container text-left bordered">
+          <h5>Toggle Group (Inline)</h5>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-primary active">
+              <input type="radio" name="options" id="option1" checked>
+              Active </label>
+            <label class="btn btn-outline-primary">
+              <input type="radio" name="options" id="option2">
+              Radio </label>
+            <label class="btn btn-outline-primary">
+              <input type="radio" name="options" id="option3">
+              Radio </label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Radio button Sample (Independent) --> 
+    
+    <!-- Start of Scroll to Top Sample (Independent) -->
+    <section class="component-section" id="scrolltotop-wrapper" >
+      <div class="container-fluid max-content-width">
+        <h2 class="text-center mb-4">Scroll to Top</h2>
+        <p>This is to demonstrate "scroll to top" button that becomes visible when the user starts to scroll the page. </p>
+        <p>A button that looks like <span  class="scroll-to-top" title="Scroll to Top"><span class="fas fa-chevron-up"></span></span> appears at botttom right corner. Javascript is required for this component. </p>
+      </div>
+    </section>
+    <!-- End of Scroll to Top Sample (Independent) --> 
+    
+    <!-- Start of Tab Sample (Independent) -->
+    <section class="component-section" id="tab-wrapper" >
+      <h2 class="text-center">Tabs</h2>
+      
+      <!---Horizontal Tabs with Icon-->
+      
+      <div class="container-fluid mb-5">
+        <h3 class="my-3 text-left">Horizontal Tabs</h3>
+        <div class="horizontal-tab">
+          <ul class="nav nav-tabs left">
+            <li class="nav-item "><a class="nav-link active" data-toggle="tab"  href="#h-tab-1">Tab 1</a></li>
+            <li class="nav-item"><a  class="nav-link" data-toggle="tab"  href="#h-tab-2">Tab 2</a></li>
+            <li class="nav-item"><a  class="nav-link" data-toggle="tab"  href="#h-tab-3">Tab 3</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab"  href="#h-tab-4">Tab 4</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab"  href="#h-tab-5">Tab 5</a></li>
+          </ul>
+          
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="h-tab-1">
+              <h3 class="tab-title">Tab 1 Content</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tab-pane " id="h-tab-2">
+              <h3 class="tab-title">Tab 2 Content</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tab-pane " id="h-tab-3">
+              <h3 class="tab-title">Tab 3 Content</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tab-pane " id="h-tab-4">
+              <h3 class="tab-title">Tab 4 Content</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tab-pane " id="h-tab-5">
+              <h3 class="tab-title">Tab 5 Content</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!---Horizontal Boxed Tabs with Icon-->
+      
+      <div class="container-fluid mb-5">
+        <h3 class="my-3 text-left">Horizontal Boxed Tabs with Icon</h3>
+        <div class="horizontal-boxed-tab has-icon">
+          <ul class="nav nav-tabs left">
+            <li class="nav-item "><a class="nav-link active" data-toggle="tab"  href="#hb-tab-1"><span><i class="fal fa-briefcase"></i></span>Tab 1</a></li>
+            <li class="nav-item"><a  class="nav-link" data-toggle="tab"  href="#hb-tab-2"><span><i class="fal fa-briefcase"></i></span>Tab 2</a></li>
+            <li class="nav-item"><a  class="nav-link" data-toggle="tab"  href="#hb-tab-3"><span><i class="fal fa-briefcase"></i></span>Tab 3</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab"  href="#hb-tab-4"><span><i class="fal fa-briefcase"></i></span>Tab 4</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab"  href="#hb-tab-5"><span><i class="fal fa-briefcase"></i></span>Tab 5</a></li>
+          </ul>
+          
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="hb-tab-1">
+              <h3 class="tab-title">Tab 1 Content</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tab-pane " id="hb-tab-2">
+              <h3 class="tab-title">Tab 2 Content</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tab-pane " id="hb-tab-3">
+              <h3 class="tab-title">Tab 3 Content</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tab-pane " id="hb-tab-4">
+              <h3 class="tab-title">Tab 4 Content</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tab-pane " id="hb-tab-5">
+              <h3 class="tab-title">Tab 5 Content</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!---Vertical Tabs with Icon-->
+      <h3>Vertical Tabs</h3>
+      <div class="container-fluid mb-4">
+        <div class="vertical-tab d-flex">
+          <div class="nav-left">
+            <ul class="nav nav-tabs">
+              <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#vtab1"><span><i class="fal fa-briefcase"></i></span>Tab 1</a> </li>
+              <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#vtab2"><span><i class="fal fa-briefcase"></i></span>Tab 2</a> </li>
+              <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#vtab3"><span><i class="fal fa-briefcase"></i></span>Tab 3</a> </li>
+              <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#vtab4"><span><i class="fal fa-briefcase"></i></span>Tab 4</a> </li>
+              <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#vtab5"><span><i class="fal fa-briefcase"></i></span>Tab 5</a> </li>
+            </ul>
+          </div>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane container active" id="vtab1">
+              <h3 class="tab-title">Tab 1</h3>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            </div>
+            <div class="tab-pane container" id="vtab2">
+              <h3 class="tab-title">Tab 2</h3>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            </div>
+            <div class="tab-pane container" id="vtab3">
+              <h3 class="tab-title">Tab 3</h3>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            </div>
+            <div class="tab-pane container" id="vtab4">
+              <h3 class="tab-title">Tab 4</h3>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            </div>
+            <div class="tab-pane container" id="vtab5">
+              <h3 class="tab-title">Tab 5</h3>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!---Vertical Tabs with Icon-->
+      <h3>Vertical Boxed Tabs</h3>
+      <div class="container-fluid mb-4">
+        <div class="vertical-boxed-tab has-icon d-flex">
+          <div class="nav-left">
+            <ul class="nav nav-tabs">
+              <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#vbtab1"><span><i class="fal fa-briefcase"></i></span>Tab 1</a> </li>
+              <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#vbtab2"><span><i class="fal fa-briefcase"></i></span>Tab 2</a> </li>
+              <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#vbtab3"><span><i class="fal fa-briefcase"></i></span>Tab 3</a> </li>
+              <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#vbtab4"><span><i class="fal fa-briefcase"></i></span>Tab 4</a> </li>
+              <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#vbtab5"><span><i class="fal fa-briefcase"></i></span>Tab 5</a> </li>
+            </ul>
+          </div>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane container active" id="vbtab1">
+              <h3 class="tab-title">Tab 1</h3>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            </div>
+            <div class="tab-pane container" id="vbtab2">
+              <h3 class="tab-title">Tab 2</h3>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            </div>
+            <div class="tab-pane container" id="vbtab3">
+              <h3 class="tab-title">Tab 3</h3>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            </div>
+            <div class="tab-pane container" id="vbtab4">
+              <h3 class="tab-title">Tab 4</h3>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            </div>
+            <div class="tab-pane container" id="vbtab5">
+              <h3 class="tab-title">Tab 5</h3>
+              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- End of Tab Sample (Independent) --> 
+    
+    <!-- Start of  Tables Sample --> 
+    <!-- Start of Static Table Sample -->
+    <section class="component-section" id="static-table-wrapper">
+      <h2 class="text-center">Static table</h2>
+      <div class="container-fluid text-left" >
+        <div class="static-table">
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-title="#">1</td>
+                  <td data-title="First">Mark</td>
+                  <td data-title="Last">Otto</td>
+                  <td data-title="Status"><span class="jds-tag has-success-light">Approved</span></td>
+                </tr>
+                <tr>
+                  <td data-title="#">2</td>
+                  <td data-title="First">Jacob</td>
+                  <td data-title="Last">Thornton</td>
+                  <td data-title="Status"><span class="jds-tag has-error-light">Rejected</span></td>
+                </tr>
+                <tr>
+                  <th data-title="#">3</th>
+                  <td data-title="First">Larry</td>
+                  <td data-title="Last">the Bird</td>
+                  <td data-title="Status"><span class="jds-tag has-example-light">Example</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="'pagination-container'">
+              <ul class="pagination justify-content-end">
+                <li class="page-item disabled"><a class="page-link" href="#"><i class="fal fa-chevron-left"></i><span class="sr-only">Previous</span></a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#"><i class="fal fa-chevron-right"></i><span class="sr-only">Next</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Static Table Sample --> 
+    <!-- Start of DataTables Sample -->
+    <section class="component-section" id="datatable-wrapper" >
+      <h2 class="text-center">DataTables</h2>
+      <div class="container-fluid text-left" id="section-datatables">
+        <table id="datatables-example" class="display nowrap dataTable dtr-inline collapsed" style="width:100%">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Office</th>
+              <th class="text-center">Age</th>
+              <th style="width: 120px">Start date</th>
+              <th style="width: 100px">Salary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tiger Nixon</td>
+              <td>System Architect</td>
+              <td>Edinburgh</td>
+              <td class="text-center">61</td>
+              <td>2011/04/25</td>
+              <td class="text-right">$320,800</td>
+            </tr>
+            <tr>
+              <td>Garrett Winters</td>
+              <td>Accountant</td>
+              <td>Tokyo</td>
+              <td class="text-center">63</td>
+              <td>2011/07/25</td>
+              <td class="text-right">$170,750</td>
+            </tr>
+            <tr>
+              <td>Ashton Cox</td>
+              <td>Junior Technical Author</td>
+              <td>San Francisco</td>
+              <td class="text-center">66</td>
+              <td>2009/01/12</td>
+              <td class="text-right">$86,000</td>
+            </tr>
+            <tr>
+              <td>Cedric Kelly</td>
+              <td>Senior Javascript Developer</td>
+              <td>Edinburgh</td>
+              <td class="text-center">22</td>
+              <td>2012/03/29</td>
+              <td class="text-right">$433,060</td>
+            </tr>
+            <tr>
+              <td>Airi Satou</td>
+              <td>Accountant</td>
+              <td>Tokyo</td>
+              <td class="text-center">33</td>
+              <td>2008/11/28</td>
+              <td class="text-right">$162,700</td>
+            </tr>
+            <tr>
+              <td>Brielle Williamson</td>
+              <td>Integration Specialist</td>
+              <td>New York</td>
+              <td class="text-center">61</td>
+              <td>2012/12/02</td>
+              <td class="text-right">$372,000</td>
+            </tr>
+            <tr>
+              <td>Herrod Chandler</td>
+              <td>Sales Assistant</td>
+              <td>San Francisco</td>
+              <td class="text-center">59</td>
+              <td>2012/08/06</td>
+              <td class="text-right">$137,500</td>
+            </tr>
+            <tr>
+              <td>Rhona Davidson</td>
+              <td>Integration Specialist</td>
+              <td>Tokyo</td>
+              <td class="text-center">55</td>
+              <td>2010/10/14</td>
+              <td class="text-right">$327,900</td>
+            </tr>
+            <tr>
+              <td>Colleen Hurst</td>
+              <td>Javascript Developer</td>
+              <td>San Francisco</td>
+              <td class="text-center">39</td>
+              <td>2009/09/15</td>
+              <td class="text-right">$205,500</td>
+            </tr>
+            <tr>
+              <td>Sonya Frost</td>
+              <td>Software Engineer</td>
+              <td>Edinburgh</td>
+              <td class="text-center">23</td>
+              <td>2008/12/13</td>
+              <td class="text-right">$103,600</td>
+            </tr>
+            <tr>
+              <td>Jena Gaines</td>
+              <td>Office Manager</td>
+              <td>London</td>
+              <td class="text-center">30</td>
+              <td>2008/12/19</td>
+              <td class="text-right">$90,560</td>
+            </tr>
+            <tr>
+              <td>Quinn Flynn</td>
+              <td>Support Lead</td>
+              <td>Edinburgh</td>
+              <td class="text-center">22</td>
+              <td>2013/03/03</td>
+              <td class="text-right">$342,000</td>
+            </tr>
+            <tr>
+              <td>Charde Marshall</td>
+              <td>Regional Director</td>
+              <td>San Francisco</td>
+              <td class="text-center">36</td>
+              <td>2008/10/16</td>
+              <td class="text-right">$470,600</td>
+            </tr>
+            <tr>
+              <td>Haley Kennedy</td>
+              <td>Senior Marketing Designer</td>
+              <td>London</td>
+              <td class="text-center">43</td>
+              <td>2012/12/18</td>
+              <td class="text-right">$313,500</td>
+            </tr>
+            <tr>
+              <td>Tatyana Fitzpatrick</td>
+              <td>Regional Director</td>
+              <td>London</td>
+              <td class="text-center">19</td>
+              <td>2010/03/17</td>
+              <td class="text-right">$385,750</td>
+            </tr>
+            <tr>
+              <td>Michael Silva</td>
+              <td>Marketing Designer</td>
+              <td>London</td>
+              <td class="text-center">66</td>
+              <td>2012/11/27</td>
+              <td class="text-right">$198,500</td>
+            </tr>
+            <tr>
+              <td>Paul Byrd</td>
+              <td>Chief Financial Officer (CFO)</td>
+              <td>New York</td>
+              <td class="text-center">64</td>
+              <td>2010/06/09</td>
+              <td class="text-right">$725,000</td>
+            </tr>
+            <tr>
+              <td>Gloria Little</td>
+              <td>Systems Administrator</td>
+              <td>New York</td>
+              <td class="text-center">59</td>
+              <td>2009/04/10</td>
+              <td class="text-right">$237,500</td>
+            </tr>
+            <tr>
+              <td>Bradley Greer</td>
+              <td>Software Engineer</td>
+              <td>London</td>
+              <td class="text-center">41</td>
+              <td>2012/10/13</td>
+              <td class="text-right">$132,000</td>
+            </tr>
+            <tr>
+              <td>Dai Rios</td>
+              <td>Personnel Lead</td>
+              <td>Edinburgh</td>
+              <td class="text-center">35</td>
+              <td>2012/09/26</td>
+              <td class="text-right">$217,500</td>
+            </tr>
+            <tr>
+              <td>Jenette Caldwell</td>
+              <td>Development Lead</td>
+              <td>New York</td>
+              <td class="text-center">30</td>
+              <td>2011/09/03</td>
+              <td class="text-right">$345,000</td>
+            </tr>
+            <tr>
+              <td>Yuri Berry</td>
+              <td>Chief Marketing Officer (CMO)</td>
+              <td>New York</td>
+              <td class="text-center">40</td>
+              <td>2009/06/25</td>
+              <td class="text-right">$675,000</td>
+            </tr>
+            <tr>
+              <td>Caesar Vance</td>
+              <td>Pre-Sales Support</td>
+              <td>New York</td>
+              <td class="text-center">21</td>
+              <td>2011/12/12</td>
+              <td class="text-right">$106,450</td>
+            </tr>
+            <tr>
+              <td>Doris Wilder</td>
+              <td>Sales Assistant</td>
+              <td>Sydney</td>
+              <td class="text-center">23</td>
+              <td>2010/09/20</td>
+              <td class="text-right">$85,600</td>
+            </tr>
+            <tr>
+              <td>Angelica Ramos</td>
+              <td>Chief Executive Officer (CEO)</td>
+              <td>London</td>
+              <td class="text-center">47</td>
+              <td>2009/10/09</td>
+              <td class="text-right">$1,200,000</td>
+            </tr>
+            <tr>
+              <td>Gavin Joyce</td>
+              <td>Developer</td>
+              <td>Edinburgh</td>
+              <td class="text-center">42</td>
+              <td>2010/12/22</td>
+              <td class="text-right">$92,575</td>
+            </tr>
+            <tr>
+              <td>Jennifer Chang</td>
+              <td>Regional Director</td>
+              <td>Singapore</td>
+              <td class="text-center">28</td>
+              <td>2010/11/14</td>
+              <td class="text-right">$357,650</td>
+            </tr>
+            <tr>
+              <td>Brenden Wagner</td>
+              <td>Software Engineer</td>
+              <td>San Francisco</td>
+              <td class="text-center">28</td>
+              <td>2011/06/07</td>
+              <td class="text-right">$206,850</td>
+            </tr>
+            <tr>
+              <td>Fiona Green</td>
+              <td>Chief Operating Officer (COO)</td>
+              <td>San Francisco</td>
+              <td class="text-center">48</td>
+              <td>2010/03/11</td>
+              <td class="text-right">$850,000</td>
+            </tr>
+            <tr>
+              <td>Shou Itou</td>
+              <td>Regional Marketing</td>
+              <td>Tokyo</td>
+              <td class="text-center">20</td>
+              <td>2011/08/14</td>
+              <td class="text-right">$163,000</td>
+            </tr>
+            <tr>
+              <td>Michelle House</td>
+              <td>Integration Specialist</td>
+              <td>Sydney</td>
+              <td class="text-center">37</td>
+              <td>2011/06/02</td>
+              <td class="text-right">$95,400</td>
+            </tr>
+            <tr>
+              <td>Suki Burks</td>
+              <td>Developer</td>
+              <td>London</td>
+              <td class="text-center">53</td>
+              <td>2009/10/22</td>
+              <td class="text-right">$114,500</td>
+            </tr>
+            <tr>
+              <td>Prescott Bartlett</td>
+              <td>Technical Author</td>
+              <td>London</td>
+              <td class="text-center">27</td>
+              <td>2011/05/07</td>
+              <td class="text-right">$145,000</td>
+            </tr>
+            <tr>
+              <td>Gavin Cortez</td>
+              <td>Team Leader</td>
+              <td>San Francisco</td>
+              <td class="text-center">22</td>
+              <td>2008/10/26</td>
+              <td class="text-right">$235,500</td>
+            </tr>
+            <tr>
+              <td>Martena Mccray</td>
+              <td>Post-Sales support</td>
+              <td>Edinburgh</td>
+              <td class="text-center">46</td>
+              <td>2011/03/09</td>
+              <td class="text-right">$324,050</td>
+            </tr>
+            <tr>
+              <td>Unity Butler</td>
+              <td>Marketing Designer</td>
+              <td>San Francisco</td>
+              <td class="text-center">47</td>
+              <td>2009/12/09</td>
+              <td class="text-right">$85,675</td>
+            </tr>
+            <tr>
+              <td>Howard Hatfield</td>
+              <td>Office Manager</td>
+              <td>San Francisco</td>
+              <td class="text-center">51</td>
+              <td>2008/12/16</td>
+              <td class="text-right">$164,500</td>
+            </tr>
+            <tr>
+              <td>Hope Fuentes</td>
+              <td>Secretary</td>
+              <td>San Francisco</td>
+              <td class="text-center">41</td>
+              <td>2010/02/12</td>
+              <td class="text-right">$109,850</td>
+            </tr>
+            <tr>
+              <td>Vivian Harrell</td>
+              <td>Financial Controller</td>
+              <td>San Francisco</td>
+              <td class="text-center">62</td>
+              <td>2009/02/14</td>
+              <td class="text-right">$452,500</td>
+            </tr>
+            <tr>
+              <td>Timothy Mooney</td>
+              <td>Office Manager</td>
+              <td>London</td>
+              <td class="text-center">37</td>
+              <td>2008/12/11</td>
+              <td class="text-right">$136,200</td>
+            </tr>
+            <tr>
+              <td>Jackson Bradshaw</td>
+              <td>Director</td>
+              <td>New York</td>
+              <td class="text-center">65</td>
+              <td>2008/09/26</td>
+              <td class="text-right">$645,750</td>
+            </tr>
+            <tr>
+              <td>Olivia Liang</td>
+              <td>Support Engineer</td>
+              <td>Singapore</td>
+              <td class="text-center">64</td>
+              <td>2011/02/03</td>
+              <td class="text-right">$234,500</td>
+            </tr>
+            <tr>
+              <td>Bruno Nash</td>
+              <td>Software Engineer</td>
+              <td>London</td>
+              <td class="text-center">38</td>
+              <td>2011/05/03</td>
+              <td class="text-right">$163,500</td>
+            </tr>
+            <tr>
+              <td>Sakura Yamamoto</td>
+              <td>Support Engineer</td>
+              <td>Tokyo</td>
+              <td class="text-center">37</td>
+              <td>2009/08/19</td>
+              <td class="text-right">$139,575</td>
+            </tr>
+            <tr>
+              <td>Thor Walton</td>
+              <td>Developer</td>
+              <td>New York</td>
+              <td class="text-center">61</td>
+              <td>2013/08/11</td>
+              <td class="text-right">$98,540</td>
+            </tr>
+            <tr>
+              <td>Finn Camacho</td>
+              <td>Support Engineer</td>
+              <td>San Francisco</td>
+              <td class="text-center">47</td>
+              <td>2009/07/07</td>
+              <td class="text-right">$87,500</td>
+            </tr>
+            <tr>
+              <td>Serge Baldwin</td>
+              <td>Data Coordinator</td>
+              <td>Singapore</td>
+              <td class="text-center">64</td>
+              <td>2012/04/09</td>
+              <td class="text-right">$138,575</td>
+            </tr>
+            <tr>
+              <td>Zenaida Frank</td>
+              <td>Software Engineer</td>
+              <td>New York</td>
+              <td class="text-center">63</td>
+              <td>2010/01/04</td>
+              <td class="text-right">$125,250</td>
+            </tr>
+            <tr>
+              <td>Zorita Serrano</td>
+              <td>Software Engineer</td>
+              <td>San Francisco</td>
+              <td class="text-center">56</td>
+              <td>2012/06/01</td>
+              <td class="text-right">$115,000</td>
+            </tr>
+            <tr>
+              <td>Jennifer Acosta</td>
+              <td>Junior Javascript Developer</td>
+              <td>Edinburgh</td>
+              <td class="text-center">43</td>
+              <td>2013/02/01</td>
+              <td class="text-right">$75,650</td>
+            </tr>
+            <tr>
+              <td>Cara Stevens</td>
+              <td>Sales Assistant</td>
+              <td>New York</td>
+              <td class="text-center">46</td>
+              <td>2011/12/06</td>
+              <td class="text-right">$145,600</td>
+            </tr>
+            <tr>
+              <td>Hermione Butler</td>
+              <td>Regional Director</td>
+              <td>London</td>
+              <td class="text-center">47</td>
+              <td>2011/03/21</td>
+              <td class="text-right">$356,250</td>
+            </tr>
+            <tr>
+              <td>Lael Greer</td>
+              <td>Systems Administrator</td>
+              <td>London</td>
+              <td class="text-center">21</td>
+              <td>2009/02/27</td>
+              <td class="text-right">$103,500</td>
+            </tr>
+            <tr>
+              <td>Jonas Alexander</td>
+              <td>Developer</td>
+              <td>San Francisco</td>
+              <td class="text-center">30</td>
+              <td>2010/07/14</td>
+              <td class="text-right">$86,500</td>
+            </tr>
+            <tr>
+              <td>Shad Decker</td>
+              <td>Regional Director</td>
+              <td>Edinburgh</td>
+              <td class="text-center">51</td>
+              <td>2008/11/13</td>
+              <td class="text-right">$183,000</td>
+            </tr>
+            <tr>
+              <td>Michael Bruce</td>
+              <td>Javascript Developer</td>
+              <td>Singapore</td>
+              <td class="text-center">29</td>
+              <td>2011/06/27</td>
+              <td class="text-right">$183,000</td>
+            </tr>
+            <tr>
+              <td>Donna Snider</td>
+              <td>Customer Support</td>
+              <td>New York</td>
+              <td class="text-center">27</td>
+              <td>2011/01/25</td>
+              <td class="text-right">$112,000</td>
+            </tr>
+          </tbody>
+          <!-- Table footer
+               <tfoot>
+                   <tr>
+                       <th>Name</th>
+                       <th>Position</th>
+                       <th>Office</th>
+                       <th class="text-center">Age</th>
+                       <th>Start date</th>
+                       <th>Salary</th>
+                   </tr>
+               </tfoot>
+               -->
+        </table>
+      </div>
+    </section>
+    <!-- End of DataTables Sample --> 
+    <!-- Start of FAQs Sample -->
+    <section class="component-section" id="faq-wrapper">
+      <div class="container-fluid max-content-width" >
+        <div class="container-fluid" id="section-faqs">
+          <h2 class="text-center">Searchable FAQs</h2>
+          <p>There are hidden keywords "hidden" and "hide" hidden within the first question.</p>
+          <div class="faq">
+            <input class="faq-search" type="search" value="" placeholder="Type some keywords (e.g. giza, babylon, colossus)" />
+            <ul class="faq-container">
+              <li id="faq-1">
+                <h2><a href="#faq-1">Great Pyramid of Giza</a></h2>
+                <div>
+                  <p>The Great Pyramid of Giza (also known as the Pyramid of Khufu or the Pyramid of Cheops) is the oldest and largest of the three pyramids in the Giza Necropolis bordering what is now El Giza, Egypt. It is the oldest of the Seven Wonders of the Ancient World, and the only one to remain largely intact.</p>
+                  <div class="hidden-keywords">Hidden Hide</div>
+                </div>
+              </li>
+              <li id="faq-2">
+                <h2><a href="#faq-2">Hanging Gardens of Babylon</a></h2>
+                <div>
+                  <p>The Hanging Gardens of Babylon were one of the Seven Wonders of the Ancient World, and the only one whose location has not been definitely established.</p>
+                  <p>The Hanging Gardens were a distinctive feature of ancient Babylon. They were a great source of pride to the people, and were often described in accounts written by visitors to the city. Possibly built by King Nebuchadnezzar II in 600 BC, the gardens are believed to have been a remarkable feat of engineering: an ascending series of tiered gardens containing all manner of trees, shrubs, and vines. The gardens were said to have looked like a large green mountain constructed of mud bricks, rising from the center of the city.</p>
+                </div>
+              </li>
+              <li id="faq-3">
+                <h2><a href="#faq-3">Statue of Zeus at Olympia</a></h2>
+                <div>
+                  <p>The Statue of Zeus at Olympia was a giant seated figure, about 13 m (43 ft) tall, made by the Greek sculptor Phidias around 435 BC at the sanctuary of Olympia, Greece, and erected in the Temple of Zeus there. A sculpture of ivory plates and gold panels over a wooden framework, it represented the god Zeus sitting on an elaborate cedar wood throne ornamented with ebony, ivory, gold and precious stones. It was regarded as one of the Seven Wonders of the Ancient World until its eventual loss and destruction during the 5th century AD. No copy of the statue has ever been found, and details of its form are known only from ancient Greek descriptions and representations on coins.</p>
+                </div>
+              </li>
+              <li id="faq-4">
+                <h2><a href="#faq-4">Temple of Artemis</a></h2>
+                <div>
+                  <p>The Temple of Artemis or Artemision (Greek: Ἀρτεμίσιον, Turkish: Artemis Tapınağı), also known less precisely as the Temple of Diana, was a Greek temple dedicated to the goddess Artemis and is one of the Seven Wonders of the Ancient World. It was located in Ephesus (near the modern town of Selçuk in present-day Turkey), and was completely rebuilt three times before its eventual destruction in 401. Only foundations and sculptural fragments of the latest of the temples at the site remain.</p>
+                </div>
+              </li>
+              <li id="faq-5">
+                <h2><a href="#faq-5">Mausoleum at Halicarnassus</a></h2>
+                <div>
+                  <p>The Mausoleum at Halicarnassus or Tomb of Mausolus (Persian: آرامگاه هالیکارناسوس‎; Modern Greek: Μαυσωλείο της Αλικαρνασσού; Turkish: Halikarnas Mozolesi) was a tomb built between 353 and 350 BC at Halicarnassus (present Bodrum, Turkey) for Mausolus, a satrap in the Persian Empire, and Artemisia II of Caria, who was both his wife and his sister. The structure was designed by the Greek architects Satyros and Pythius of Priene.</p>
+                </div>
+              </li>
+              <li id="faq-6">
+                <h2><a href="#faq-6">Colossus of Rhodes</a></h2>
+                <div>
+                  <p>The Colossus of Rhodes /roʊdz/ (Ancient Greek: ὁ Κολοσσὸς Ῥόδιος ho Kolossòs Rhódios) was a statue of the Greek titan-god of the sun Helios, erected in the city of Rhodes, on the Greek island of the same name, by Chares of Lindos in 280 BC. It is one of the Seven Wonders of the Ancient World. It was constructed to celebrate Rhodes' victory over the ruler of Cyprus, Antigonus I Monophthalmus, whose son unsuccessfully besieged Rhodes in 305 BC. Before its destruction in the earthquake of 226 BC, the Colossus of Rhodes stood over 30 metres (98 feet) high, making it one of the tallest statues of the ancient world.</p>
+                </div>
+              </li>
+              <li id="faq-7">
+                <h2><a href="#faq-7">Lighthouse of Alexandria</a></h2>
+                <div>
+                  <p>The Lighthouse of Alexandria, sometimes called the Pharos of Alexandria (/ˈfɛərɒs/; Ancient Greek: ὁ Φάρος τῆς Ἀλεξανδρείας), was a lighthouse built by the Ptolemaic Kingdom between 280 and 247 BC which was between 393 and 450 ft (120 and 137 m) tall. It was one of the tallest man-made structures in the world for many centuries, and was regarded as one of the Seven Wonders of the Ancient World. Badly damaged by three earthquakes between AD 956 and 1323, it then became an abandoned ruin. It was the third longest surviving ancient wonder (after the Mausoleum at Halicarnassus and the extant Great Pyramid of Giza) until in 1480 the last of its remnant stones were used to build the Citadel of Qaitbay on the site. In 1994, French archaeologists discovered some remains of the lighthouse on the floor of Alexandria's Eastern Harbour.</p>
+                </div>
+              </li>
+            </ul>
+            <div class="faq__notfound">
+              <p>No matches were found&hellip; Try &ldquo;giza&rdquo;.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of FAQs Sample --> 
+    
+    <!-- End of  Tables Sample --> 
+    
+    <!-- Start of Tag Sample (Independent) -->
+    <section class="component-section" id="tag-wrapper">
+      <h2 class="text-center">Tags</h2>
+      <div class="container-fluid text-left">
+        <h3 class="my-3">Dark</h3>
+        <span class="jds-tag has-primary">Primary</span> <span class="jds-tag has-secondary">Secondary</span> <span class="jds-tag has-success">Success</span> <span class="jds-tag has-error">Error</span> <span class="jds-tag has-warning">Warning</span> <span class="jds-tag has-example">Example</span>
+        <h3 class="mt-5">Light</h3>
+        <span class="jds-tag has-primary-light">Primary</span> <span class="jds-tag has-secondary-light">Secondary</span> <span class="jds-tag has-success-light">Success</span> <span class="jds-tag has-error-light">Error</span> <span class="jds-tag has-warning-light">Warning</span> <span class="jds-tag has-example-light">Example</span> </div>
+    </section>
+    <!-- End of Tag Sample (Independent) --> 
+    
+    <!-- Start of Text area -->
+    <section class="component-section" id="textarea-wrapper">
+      <h2 class="text-center">Text Area</h2>
+      <div class="container-fluid">
+        <h4 class="text-left">Default form </h4>
+        <div class="form-panel">
+          <div class="form-panel-body">
+            <div class="form-group required">
+              <label class="col-form-label">Text area label</label>
+              <textarea class="form-control form-control-lg" placeholder="Enter text  here" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Text area label</label>
+              <textarea class="form-control form-control-lg" placeholder="Enter text  here" disabled rows="5"></textarea>
+            </div>
+            <div class="form-horizontal mt-4">
+              <h4 class="text-left">Horizontal form </h4>
+              <div class="form-group row required">
+                <label class="col-form-label col-md-3">Text area label</label>
+                <div class="col-md-9">
+                  <textarea class="form-control form-control-lg" placeholder="Enter text  here" rows="5"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Text area   --> 
+    
+    <!-- Start of Text input Sample (Independent) -->
+    <section class="component-section" id="textinput-wrapper">
+      <h2 class="text-center">Text Input</h2>
+      <div class="container-fluid">
+        <div class="form-panel-boxed">
+          <div class="form-panel-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="col-form-label">Default</label>
+                  <input class="form-control" type="text">
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group">
+                  <label class="col-form-label">Default medium</label>
+                  <input class="form-control form-control-md" type="text">
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group">
+                  <label class="col-form-label">Default small</label>
+                  <input class="form-control form-control-sm" type="text">
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group">
+                  <label class="col-form-label">Default extra small</label>
+                  <input class="form-control form-control-xsm" type="text">
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group disabled">
+                  <label class="col-form-label">Disabled</label>
+                  <input class="form-control" type="text">
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group  required">
+                  <label class="col-form-label">Input with success message</label>
+                  <div class="field-icon field-success">
+                    <input class="form-control" type="text">
+                  </div>
+                  <span class="message text-success">This is a success message.</span> <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group  required">
+                  <label class="col-form-label">Input with success message</label>
+                  <div class="field-icon field-icon-md field-success">
+                    <input class="form-control" type="text">
+                  </div>
+                  <span class="message text-success">This is a success message.</span> <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group  required">
+                  <label class="col-form-label">Input with success message</label>
+                  <div class="field-icon field-icon-sm field-success">
+                    <input class="form-control" type="text">
+                  </div>
+                  <span class="message text-success">This is a success message.</span> <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group  required">
+                  <label class="col-form-label">Input with success message</label>
+                  <div class="field-icon field-icon-xsm field-success">
+                    <input class="form-control" type="text">
+                  </div>
+                  <span class="message text-success">This is a success message.</span> <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group required">
+                  <label class="col-form-label">Input with error</label>
+                  <div class="field-icon field-danger">
+                    <input class="form-control" type="text">
+                  </div>
+                  <span class="message text-danger">This is an error message. </span> <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group">
+                  <label class="col-form-label">Inline button</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">Find</button>
+                    </div>
+                  </div>
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group">
+                  <label class="col-form-label">Inline button medium</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control form-control-md" placeholder="" aria-label="" aria-describedby="">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">Find</button>
+                    </div>
+                  </div>
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group">
+                  <label class="col-form-label">Inline button small</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control form-control-sm" placeholder="" aria-label="" aria-describedby="">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">Find</button>
+                    </div>
+                  </div>
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group">
+                  <label class="col-form-label">Inline button extra small</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control form-control-xsm" placeholder="" aria-label="" aria-describedby="">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">Find</button>
+                    </div>
+                  </div>
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group">
+                  <label class="col-form-label">With icon</label>
+                  <div class="input-group input-group-with-icon">
+                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="">
+                    <div class="input-group-append">
+                      <button class="btn" type="button"><i class="fal fa-search"></i></button>
+                    </div>
+                  </div>
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group">
+                  <label class="col-form-label">With icon medium</label>
+                  <div class="input-group input-group-with-icon">
+                    <input type="text" class="form-control form-control-md" placeholder="" aria-label="" aria-describedby="">
+                    <div class="input-group-append">
+                      <button class="btn" type="button"><i class="fal fa-search"></i></button>
+                    </div>
+                  </div>
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group">
+                  <label class="col-form-label">With icon small</label>
+                  <div class="input-group input-group-with-icon">
+                    <input type="text" class="form-control form-control-sm" placeholder="" aria-label="" aria-describedby="">
+                    <div class="input-group-append">
+                      <button class="btn" type="button"><i class="fal fa-search"></i></button>
+                    </div>
+                  </div>
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+                <div class="form-group">
+                  <label class="col-form-label">With icon extra small</label>
+                  <div class="input-group input-group-with-icon">
+                    <input type="text" class="form-control form-control-xsm" placeholder="" aria-label="" aria-describedby="">
+                    <div class="input-group-append">
+                      <button class="btn" type="button"><i class="fal fa-search"></i></button>
+                    </div>
+                  </div>
+                  <small class="form-text text-muted">This is example helper text!</small> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Text input Sample (Independent) --> 
+    
+    <!-- Start of Tool Tip Sample (Independent) -->
+    <section class="component-section" id="tooltip-wrapper">
+      <h2 class="text-center">Tool Tips</h2>
+      <div class="container-fluid">
+        <p class="text-left"> Lorem Ipsum is simply dummy text of the printing and <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Tooltip on top">typesetting industry</a>. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Tooltip on top">typesetting industry</a>scrambled it to make a</a> type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Tooltip on top">typesetting industry</a>remaining essentially</a> unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Tooltip on top">typesetting industry</a>with desktop publishing</a> software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+      </div>
+    </section>
+    <!-- End of Tool Tip Sample (Independent) --> 
+    
+    <!-- Start of Typography Sample (Independent) -->
+    <section class="component-section" id="typography-wrapper" >
+      <h2 class="text-center">Typography</h2>
+      <div class="container-fluid">
+        <h3 class="text-left">Desktop</h3>
+        <div class="static-table">
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Size</th>
+                  <th scope="col">Line Height</th>
+                  <th scope="col">Weight</th>
+                  <th scope="col">Example</th>
+                  <th scope="col">Usage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-title="Size" >57px</td>
+                  <td data-title="Line Height">68px</td>
+                  <td data-title="Weight">Bold</td>
+                  <td data-title="Example"><h1>Judiciary Design System</h1></td>
+                  <td data-title="Usage"><h1>H1</h1></td>
+                </tr>
+                <tr>
+                  <td data-title="Size">35px</td>
+                  <td data-title="Line Height">42px</td>
+                  <td data-title="Weight">Bold</td>
+                  <td data-title="Example"><h2>Judiciary Design System</h2></td>
+                  <td data-title="Usage"><h2>H2</h2></td>
+                </tr>
+                <tr>
+                  <td data-title="Size">24px</td>
+                  <td data-title="Line Height">29</td>
+                  <td data-title="Weight">Bold</td>
+                  <td data-title="Example"><h3>Judiciary Design System</h3></td>
+                  <td data-title="Usage"><h3>H3</h3></td>
+                </tr>
+                <tr>
+                  <td data-title="Size">18px</td>
+                  <td data-title="Line Height">28</td>
+                  <td data-title="Weight">Bold</td>
+                  <td data-title="Example"><h4>Judiciary Design System</h4></td>
+                  <td data-title="Usage"><h4>H4</h4></td>
+                </tr>
+                <tr>
+                  <td data-title="Size">16</td>
+                  <td data-title="Line Height">24</td>
+                  <td data-title="Weight">Normal</td>
+                  <td data-title="Example"><h5>Judiciary Design System</h5></td>
+                  <td data-title="Usage"><h5>Body, Paragraph</h5></td>
+                </tr>
+                <tr>
+                  <td data-title="Size">14px</td>
+                  <td data-title="Line Height">22</td>
+                  <td data-title="Weight">Normal</td>
+                  <td data-title="Example"><h6>Judiciary Design System</h6></td>
+                  <td data-title="Usage"><h6>Breadcrumb, Helper text</h6></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Typography Sample (Independent) --> 
+    
+    <!-- Start of Wizard Sample (Independent) -->
+    <section class="component-section" id="wizard-wrapper">
+      <h2 class="text-center">Wizard (Progress Bar)</h2>
+      <div class="container">
+        <div class="wizard-progress-bar">
+          <ul>
+            <li class="completed"><span>Step 1 (Completed)</span></li>
+            <li class="completed"><span>Step 2 (Completed)</span></li>
+            <li class="active"><span>Step 3 (Active)</span></li>
+            <li><span>Step 4 (Incomplete)</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- End of Wizard Sample (Independent) --> 
+    
+  </main>
+  <!-- End of Main Content --> 
+  
+  <!-- Start of Footer Block -->
+  
+  <footer class="jds-footer">
+    <div class="sitemap">
+      <div class="container-fluid">
+        <h2 class="jds-footer-sitemap-header text-left">Singapore Courts</h2>
+        <div class="footer-links"> <a href="#">About</a> <a href="#">Notices</a> <a href="faq.html">FAQs</a> <a href="#">Contact us</a> </div>
+      </div>
+    </div>
+    <hr class="divider">
+    <div class="copyright">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-7 ">
+            <div class="footer-links"> <a href="#">Report Vulnerability <i class="fal fa-external-link ml-1"></i></a> <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a> </div>
+            <div class="powered-by">Powered by <img src="images/cl-logo.png" alt=""> </div>
+          </div>
+          <div class="col-lg-5 mobile-mt-3 text-right">
+            <div>© 2020 Government of Singapore</div>
+            <div> Last updated: 15 Jan 2021</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End of Footer Block --> 
+  
+</div>
+
+<!-- End of Loader Encased Body Wrapper -->
+</body>
+</html>

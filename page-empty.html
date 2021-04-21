@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!-- CrimsonLogic UX Practice R2-S2 Foundation -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Judiciary Design System</title>
+<!-- Start of CSS Includes --> 
+<!-- Delete what you do not need to use, including comments like this line -->
+<link href="css/all.min.css" rel="stylesheet" type="text/css">
+<!-- Font Awesome Minified CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!-- Bootstrap Minified CSS -->
+<link href="css/cluxp.css" rel="stylesheet" type="text/css">
+<!--<link href="css/r2s2.css" rel="stylesheet" type="text/css">--> 
+<!-- CL UX Practice R2-S2 Foundation CSS -->
+<link href="css/datatables.css" rel="stylesheet" type="text/css">
+<!-- DataTables CSS -->
+<link href="css/animate.min.css" rel="stylesheet" type="text/css">
+<!-- Animate Minified CSS -->
+<link href="css/aos.min.css" rel="stylesheet" type="text/css">
+<!-- AOS: Animate on Scroll Minified CSS --> 
+<!-- JDS specific CSS -->
+<link href="css/jds.css" rel="stylesheet" type="text/css">
+<!-- End of CSS includes --> 
+<!-- Start of Deferred JS Includes --> 
+<!-- Delete what you do not need to use, including comments like this line --> 
+<script defer src="js/jquery.min.js"></script> <!-- jQuery Minified JS --> 
+<script defer src="js/bootstrap.bundle.min.js"></script> <!-- Bootstrap Bundle Minified JS --> 
+<script defer src="js/cluxp.js"></script> <!-- CL UX Practice R2-S2 Foundation JS --> 
+<script defer src="js/datatables.min.js"></script> <!-- DataTables Minified JS --> 
+<script defer src="js/aos.min.js"></script> <!-- AOS: Animate on Scroll Minified JS --> 
+<script defer src="js/faqs.js"></script> <!-- CL UX Practice R2-S2 Searchable FAQs JS --> 
+<script defer src="js/jds.js"></script> <!-- JDS specific JS --> 
+<!-- End of JS Includes -->
+</head>
+<body>
+<!-- Start of R2-S2's Loader Encased Body Wrapper --> 
+<!-- If you are not using the loader, delete the next line -->
+<div id="loader">
+  <div id="loading-dialog" class="modal show" tabindex="-1" aria-modal="true" style="display: block;">
+    <div class="loader-main">
+      <div class="loader">Loading...</div>
+      <span>Just a moment. We are loading the content...</span><strong><img src="images/sg-courts-logo.svg" alt="" width="240"></strong></div>
+  </div>
+</div>
+<div class="wrapper sticky" id="page"> 
+  <!-- If you do not need the Navbar to be sticky, remove the "sticky" keyword from the "wrapper" div above --> 
+  <!-- If you are using the autohide Navbar, the "sticky" keyword must be present in the "wrapper" div above --> 
+  <!-- Start of R2-S2's Scroll to Top Widget --> 
+  <a href="javascript:" id="scroll-to-top" title="Scroll to Top"><span class="fas fa-chevron-up"></span></a> 
+  <!-- End of Scroll to Top Widget --> 
+  <!-- Start of Confirmation Modal -->
+  <div class="modal fade" id="modal-sample" role="dialog" aria-labelledby="modal-sample" aria-hidden="true">
+    <div class="modal-dialog" role="document"> 
+      <!-- Start of Modal Content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirmation</h5>
+          <button type="button" class="btn close" aria-label="Close" title="Click to Close" data-dismiss="modal"><span class="fal fa-times"></span></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you really want to proceed?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" aria-label="Proceed" title="Click to Proceed" onclick="javascript:location.href=''">Proceed</button>
+          <button type="button" class="btn btn-light" aria-label="Cancel" title="Click to Cancel" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+      <!-- End of Modal Content --> 
+    </div>
+  </div>
+  <!-- End of Confirmation Modal --> 
+  <!-- Keep the components you need and delete the rest --> 
+  <!-- Anything with inline styling from here on are meant to be deleted -->
+  
+  <div class="jds-sggov-masthead">
+    <div class="container-fluid"> <a href="https://www.gov.sg" target="_blank"> <span class="sgds-icon sgds-icon-sg-crest"></span> <span class="is-text">A Singapore Government Agency Website</span> </a> </div>
+  </div>
+  <!-- Start of Bootstrap Collapsible Navbar --> 
+  <!-- If you do not need the Navbar to be sticky, remove the "sticky" keyword from the "wrapper" div above --> 
+  <!-- If you do not need a sticky autohide Navbar, remove the "-auto"keyword from the "navbar-container" div below -->
+  <header class="navbar-container">
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid"> 
+        <!-- Menu Logo --> 
+        <a class="navbar-brand" href="#"><img src="images/sg-courts-logo.svg" alt="Logo"></a>
+        <div class="navbar-toggler" onclick="menuMove(this)">
+          <div class="menu-icon">
+            <div class="menu-bar1"></div>
+            <div class="menu-bar2"></div>
+            <div class="menu-bar3"></div>
+          </div>
+        </div>
+        <div class="navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item mx-md-2"><a class="nav-link"  href="#" title="Go to Item 2">About</a></li>
+            <li class="nav-item dropdown position-static"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates <span class="caret"></span></a> 
+              
+              <!--Add .menu-inline class if inline menu is required-->
+              <div class="dropdown-menu menu-inline" aria-labelledby="navbarDropdown">
+                 <div class="container-fluid"> <a class="dropdown-item" href="page-empty.html" title="">Header + Body (Empty) + Footer</a> <a class="dropdown-item" href="page-with-content.html" title="">Header + Body with Content + Footer</a> <a class="dropdown-item" href="page-with-form.html" title="">Header + Body with Form + Footer</a><a class="dropdown-item" href="my-info.html" title="">My Info</a><a class="dropdown-item" href="faq.html" title="">FAQ</a>  </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown Menu <span class="caret"></span></a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#" title="Go to Item 1A">Dropdown Menu 1</a> <a class="dropdown-item" href="#" title="Go to Item 1B">Dropdown Menu 2</a> </div>
+            </li>
+            <li class="nav-item dropdown position-static"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components <span class="caret"></span></a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="container-fluid megamenu">
+                  <div class="row">
+                    <div class="col-lg-4"> <a class="dropdown-item" href="components.html#accordion-wrapper">Accordion</a> <a class="dropdown-item" href="components.html#badge-wrapper">Badge</a> <a class="dropdown-item" href="components.html#breadcrumb-wrapper">Breadcrumb</a> <a class="dropdown-item" href="components.html#buttons-wrapper">Button</a> <a class="dropdown-item" href="components.html#cards-wrapper">Card</a> <a class="dropdown-item" href="components.html#callouts-wrapper">Callout</a> <a class="dropdown-item" href="components.html#carousel-wrapper">Carousel</a> <a class="dropdown-item" href="components.html#checkbox-wrapper">Checkbox</a> <a class="dropdown-item" href="components.html#dropdown-wrapper">Dropdown</a> </div>
+                    <div class="col-lg-4"> <a class="dropdown-item" href="components.html#hero-wrapper">Hero</a> <a class="dropdown-item" href="components.html#icons-wrapper">Icons</a><a class="dropdown-item" href="components.html#loader-wrapper">Loader</a> <a class="dropdown-item" href="components.html#modals-wrapper">Modal</a> <a class="dropdown-item" href="components.html#notfication-wrapper">Notification</a> <a class="dropdown-item" href="components.html#pagination-wrapper">Pagination</a> <a class="dropdown-item" href="components.html#popover-wrapper">Popover</a> <a class="dropdown-item" href="components.html#radiobutton-wrapper">Radio Button</a> <a class="dropdown-item" href="components.html#scrolltotop-wrapper">Scroll to top</a> </div>
+                    <div class="col-lg-4"> <a class="dropdown-item" href="components.html#tab-wrapper">Tab</a> <a class="dropdown-item" href="components.html#static-table-wrapper">Table</a> <a class="dropdown-item" href="components.html#tag-wrapper">Tag</a> <a class="dropdown-item" href="components.html#textarea-wrapper">Text Area</a> <a class="dropdown-item" href="components.html#textinput-wrapper">Text Input</a> <a class="dropdown-item" href="components.html#tooltip-wrapper">Tooltip</a> <a class="dropdown-item" href="components.html#typography-wrapper">Typography</a> <a class="dropdown-item" href="components.html#wizard-wrapper">Wizard</a> </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-md-auto">
+            <li class="nav-item ml-2 ml-md-0 my-2 my-md-0">
+              <button class="btn btn-primary" type="button" aria-label="Login" title="Login Now" onclick="javascript:location.href=''"><span class="fal fa-unlock-alt"></span> Login</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End of Bootstrap Collapsible Navbar --> 
+  <!-- Start of Main Content -->
+  <main class="main-content">
+    <section class="innerpage-banner-container">
+      <div class="container-fluid">
+        <h1>Header + Body (Empty) + Footer</h1>
+      </div>
+    </section>
+	  
+    <section  class="py-5">
+      <div class="container-fluid"></div>
+    </section>
+  </main>
+  <!-- End of Main Content --> 
+  
+  <!-- Start of Footer Block -->
+  
+  <footer class="jds-footer">
+    <div class="sitemap">
+      <div class="container-fluid">
+        <h2 class="jds-footer-sitemap-header text-left">Singapore Courts</h2>
+        <div class="footer-links"> <a href="#">About</a> <a href="">Notices</a> <a href="faq.html">FAQs</a> <a href="#">Contact us</a> </div>
+      </div>
+    </div>
+    <hr class="divider">
+    <div class="copyright">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 ">
+            <div class="footer-links"> <a href="#">Report Vulnerability <i class="fal fa-external-link ml-1"></i></a> <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a> </div>
+            <div class="powered-by">Powered by <img src="images/cl-logo.png" alt=""> </div>
+          </div>
+          <div class="col-lg-6 mobile-mt-3 text-right">
+            <div>© 2020 Government of Singapore</div>
+            <div> Last updated: 15 Jan 2021</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End of Footer Block --> 
+  
+</div>
+
+<!-- End of Loader Encased Body Wrapper -->
+</body>
+</html>

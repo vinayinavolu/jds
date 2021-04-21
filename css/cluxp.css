@@ -1,0 +1,234 @@
+/** CrimsonLogic UX Practice R2-S2 Foundation CSS Components **/
+/** Scroll to Top Style **/
+#scroll-to-top {
+  position: fixed;
+  bottom: -50px;
+  right: 20px;
+  background: #751c24;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 500;
+}
+#scroll-to-top.show {
+  bottom: 20px;
+  opacity: 1;
+  border: none;
+}
+#scroll-to-top span {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  top: 11px;
+  font-size: 25px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media only screen and (hover: hover) {
+  #scroll-to-top:hover {
+    background: #283c61;
+  }
+  #scroll-to-top:hover span {
+    color: #fff;
+    top: 4px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  #scroll-to-top {
+    bottom: -40px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 6px;
+  }
+  #scroll-to-top.show {
+    bottom: 15px;
+  }
+  #scroll-to-top span {
+    font-size: 20px;
+    top: 9px;
+  }
+}
+/** End of Scroll to Top Style **/
+/** Start of Loader Style **/
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.25); */
+  z-index: 10000;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.loader-box {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  top: 50%;
+  margin-top: -85px;
+  background-color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding-top: 32px;
+  box-shadow: 0 0 15px #afafaf;
+}
+.loader-object {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 14px;
+  z-index: 20000;
+}
+/** End of Loader Style **/
+/** Start of Notification Bar Style **/
+.notification_fw {
+  position: relative;
+  display: none;
+  color: #fff;
+  background: #c41c23;
+  text-align: center;
+  padding: 1.5rem 0;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.notification_close {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.notification_close:hover {
+  color: #000;
+}
+.notification_fw i {
+    font-size: 1.5em;
+    position: relative;
+    top: 4px;
+    margin-right: 0.5rem;
+}
+/** End of Notification Bar Style **/
+/** Start of Animated Menu Button Style **/
+.menu-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+.menu-bar1, .menu-bar2, .menu-bar3 {
+  width: 2rem;
+  height: 4px;
+  background-color: #fff;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.menu-bar1 {
+  margin: 0 0 6px;
+}
+.menu-bar2 {
+  margin: 6px 0;
+}
+.menu-bar3 {
+  margin: 6px 0 0;
+}
+/* Rotate first bar */
+.change .menu-bar1 {
+  -webkit-transform: rotate(135deg) translate(6px, -6px);
+  -moz-transition: rotate(135deg) translate(6px, -6px);
+  -ms-transform: rotate(135deg) translate(6px, -6px);
+  -o-transform: rotate(135deg) translate(6px, -6px);
+  transform: rotate(135deg) translate(8px, -8px);
+}
+/* Fade out the second bar */
+.change .menu-bar2 {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  opacity: 0;
+}
+/* Rotate last bar */
+.change .menu-bar3 {
+  -webkit-transform: rotate(225deg) translate(5px, 6px);
+  -moz-transform: rotate(225deg) translate(5px, 6px);
+  -ms-transform: rotate(225deg) translate(5px, 6px);
+  -o-transform: rotate(225deg) translate(5px, 6px);
+  transform: rotate(225deg) translate(6px, 6px);
+}
+/** End of Animated Menu Button Style **/
+/** Start of Only-Show and Only-Hide Classes **/
+/** Mapped to Bootstrap 4's breakpoints and is use to show (Only-Show) or hide (Only-Hide) items at these breakpoints **/
+@media only screen and (max-width: 575.98px) {
+  .only-show-sm, .only-show-md, .only-show-lg, .only-show-xl {
+    display: none;
+  }
+  .only-hide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .only-show, .only-show-md, .only-show-lg, .only-show-xl {
+    display: none;
+  }
+  .only-hide-sm {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .only-show, .only-show-sm, .only-show-lg, .only-show-xl {
+    display: none;
+  }
+  .only-hide-md {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .only-show, .only-show-sm, .only-show-md, .only-show-xl {
+    display: none;
+  }
+  .only-hide-lg {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .only-show, .only-show-sm, .only-show-md, .only-show-lg {
+    display: none;
+  }
+  .only-hide-xl {
+    display: none;
+  }
+}
+/** End of Only-Show and Only-Hide Classes **/
